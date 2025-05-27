@@ -1,0 +1,77 @@
+/* general styling til alle sider */
+
+:root {
+    /* farver */
+    --Krifa-Lilla: #460144;
+    --Lilla-Accent: #9946C1;
+    --Hvid: #fff;
+    --sort: #000;
+    --Gul: #f1e13d;
+    --Lys-Blaa: #cbe6f7;
+    --graa: #a6aec6;
+    --lys-Graa: #e5e9f2;
+    /* font */
+    --Hero-Desktop: 68px;
+    --heading-Desktop: 42px;
+    --Subheading-Desktop: 26px;
+    --Body: 16px;
+
+
+    --Hero-Mobile: 48px;
+    --heading-Mobile: 32px;
+    --Subheading-Mobile: 22px;
+    --Body-Mobile: 16px;
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General styling */
+body,
+h1,
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+    font-size: var(--Body);
+
+}
+
+h1 {
+    font-size: var(--Hero-Desktop);
+}
+
+h2 {
+    font-size: var(--heading-Desktop);
+}
+
+h3 {
+    font-size: var(--Subheading-Desktop);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: var(--Hero-Mobile);
+    }
+
+    h2 {
+        font-size: var(--heading-Mobile);
+    }
+
+    h3 {
+        font-size: var(--Subheading-Mobile);
+    }
+}
