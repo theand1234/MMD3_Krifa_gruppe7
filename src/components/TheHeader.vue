@@ -4,7 +4,11 @@ import { RouterLink } from 'vue-router';
 
 <template>
 
-
 </template>
 
-<style scoped></style>
+
+
+<style scoped>
+
+
+</style>

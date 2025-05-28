@@ -4,10 +4,13 @@ import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import IndexPage from './Pages/IndexPage.vue'
 import './assets/Styles/MainStyle.css'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
+  
   <main>
+    <NavBar/>
     <RouterView>
     </RouterView>
   </main>
