@@ -4,10 +4,10 @@ import { RouterLink } from 'vue-router';
 
 <template>
      <footer>
-        <section>
-            <h2>Kontakt os</h2>
+        <section class="Kontakt">
+            <h4>Kontakt os</h4>
             <div>
-        <p><i></i>Skriv til os</p>
+        <p class="Bold"><i></i>Skriv til os</p>
         <p>Har du et spørgsmål, eller rskal du sende noget til os?</p>
         <p><a href="">Brug dokument- og kontaktformularen</a></p>
         </div>
@@ -23,5 +23,59 @@ import { RouterLink } from 'vue-router';
             <p><a href="">Find din lokalle Krifa</a></p>
         </div>
     </section>
+    <section class="Information">
+        <h4>Information</h4>
+        <div><p><a href="">Om Krifa</a></p>
+        <p><a href="">Om Mit Krifa </a></p>
+        <p><a href="">Presse</a></p>
+        <p><a href="">Karriere</a></p><p><a href="">Persondata- og cookiepolitik</a></p>
+        <p><a href="">Tilgængelighed</a></p><p><a href="">A-kasse</a></p>
+        <p><a href="">Fagforening</a></p><p><a href="">Dagpengesats</a></p>
+        <p><a href="">Lønsikring</a></p>
+        </div>
+    </section>
+    <section>
+        <h5>Spred god arbejdslyst på #godarbejdslyst og følg os på:</h5>
+        <ul><li></li>
+        <li></li>
+        <li></li>
+        <li></li></ul>
+    </section>
      </footer>
 </template>
+<style scoped>
+footer{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    width: 100%;
+    padding: 45px 4rem;
+    justify-content: space-between;
+    background-color: var(--Krifa-Lilla);
+
+}
+h4{
+    font-size: var(--heading-Desktop);
+}
+h5{
+    font-size: var(--Subheading-Desktop);
+}
+footer>section {
+    
+    width: auto;
+}
+footer a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+footer p,h4,a,h5{
+    color: var(--Hvid);
+}
+div{
+    margin-top: 10px;
+}
+.Information p{
+    margin-top: 2px;
+}
+
+</style>

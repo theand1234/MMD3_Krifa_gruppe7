@@ -27,22 +27,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* General styling */
-body,
-h1,
-p,
-ul,
-li,
-a {
+
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-}
 
 p {
     line-height: 1.5;
@@ -60,6 +54,10 @@ h2 {
 
 h3 {
     font-size: var(--Subheading-Desktop);
+}
+
+.Bold {
+    font-weight: 900;
 }
 
 @media (max-width: 600px) {

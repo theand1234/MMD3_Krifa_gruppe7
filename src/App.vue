@@ -2,13 +2,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import Forside from './Pages/IndexPage.vue'
+import IndexPage from './Pages/IndexPage.vue'
 import './assets/Styles/MainStyle.css'
 </script>
 
 <template>
   <main>
-    <p>ksad</p>
     <RouterView>
     </RouterView>
   </main>
