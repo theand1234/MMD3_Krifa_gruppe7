@@ -7,8 +7,8 @@ import './assets/Styles/MainStyle.css'
 </script>
 
 <template>
-  <TheHeader />
   <main>
+    <p>ksad</p>
     <RouterView>
     </RouterView>
   </main>
