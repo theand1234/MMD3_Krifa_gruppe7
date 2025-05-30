@@ -76,6 +76,7 @@ h3 {
 
 .navbar {
     overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navbar a {
@@ -101,8 +102,12 @@ h3 {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
+    background-color: var(--Hvid);
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
     z-index: 1;
+
 }
 
 .dropdown-content a {
@@ -114,4 +119,18 @@ h3 {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.dropdown:hover .dropdown-content-3 {
+    display: flex;
+}
+
+.dropdown-content-3 a {
+    display: none;
+    position: absolute;
+    background-color: red;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 1;
 }
