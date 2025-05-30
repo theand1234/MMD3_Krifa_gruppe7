@@ -121,16 +121,26 @@ h3 {
     display: block;
 }
 
-.dropdown:hover .dropdown-content-3 {
+.dropdown:hover .DropdownIndhold {
     display: flex;
+    gap: 3rem;
+
 }
 
-.dropdown-content-3 a {
+.DropdownIndhold {
     display: none;
     position: absolute;
-    background-color: red;
+    background-color: var(--Hvid);
     left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     width: 100%;
+
     z-index: 1;
+}
+
+.DropdownIndhold>div {
+    display: flex;
+    flex-direction: column;
+
+
 }
