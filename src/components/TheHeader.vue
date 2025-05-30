@@ -18,6 +18,10 @@ header{
 .HeaderLeft{
     display: flex;
     flex-direction: row;
+    align-content: center;
+}
+img{
+    margin: 0.5rem;
 }
 
 </style>

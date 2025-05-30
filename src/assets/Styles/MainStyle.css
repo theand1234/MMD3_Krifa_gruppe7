@@ -76,7 +76,9 @@ h3 {
 
 .navbar {
     overflow: hidden;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
 }
 
 .navbar a {
@@ -96,7 +98,15 @@ h3 {
     border: none;
     outline: none;
     padding: 14px 16px;
+    background-color: var(--Hvid);
+    font-weight: 600;
+    font-size: 16px;
+}
 
+.HomeKnap {
+    font-weight: 600;
+    padding: 14px 16px;
+    font-size: 16px;
 }
 
 .dropdown-content {
@@ -107,6 +117,7 @@ h3 {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     width: 100%;
     z-index: 1;
+    padding: 2rem 1rem;
 
 }
 
@@ -115,6 +126,16 @@ h3 {
     text-decoration: none;
     display: block;
     text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 3px solid var(--Lilla-Accent);
+    width: 150px;
+    margin-left: 5rem;
+    color: #000;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--lys-Graa);
 }
 
 .dropdown:hover .dropdown-content {
@@ -136,6 +157,7 @@ h3 {
     width: 100%;
 
     z-index: 1;
+    padding: 2rem 1rem;
 }
 
 .DropdownIndhold>div {
@@ -143,4 +165,17 @@ h3 {
     flex-direction: column;
 
 
+
+}
+
+.DropdownIndhold a {
+    border-bottom: 3px solid var(--Lilla-Accent);
+    margin-left: 5rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.DropdownIndhold a:hover {
+    background-color: var(--lys-Graa);
 }
