@@ -7,18 +7,18 @@ import { RouterLink } from 'vue-router';
         <section class="Kontakt">
             <h4>Kontakt os</h4>
             <div>
-        <p class="Bold"><i></i>Skriv til os</p>
+        <p class="Bold"><i class="fa-solid fa-envelope"></i>Skriv til os</p>
         <p>Har du et spørgsmål, eller rskal du sende noget til os?</p>
         <p><a href="">Brug dokument- og kontaktformularen</a></p>
         </div>
         <div>
-            <p><i></i>Ring på 7227 7227</p>
+            <p class="Bold"><i class="fa-solid fa-phone"></i>Ring på 7227 7227</p>
             <p>Vores telefoner er åbne mandag-torsdag fra kl. 8:00 til 17:00 og fredag fra kl. 8:00 til 15:00</p>
             <p><a href="">Se hvordan du kan kontakte os</a></p>
         </div>
 
         <div>
-            <p><i></i>Find din lokale krifa</p>
+            <p class="Bold"><i class="fa-solid fa-location-dot"></i>Find din lokale krifa</p>
             <p>Vælg din afdeling og se åbningstider</p>
             <p><a href="">Find din lokalle Krifa</a></p>
         </div>
@@ -36,14 +36,24 @@ import { RouterLink } from 'vue-router';
     </section>
     <section>
         <h5>Spred god arbejdslyst på #godarbejdslyst og følg os på:</h5>
-        <ul><li></li>
-        <li></li>
-        <li></li>
-        <li></li></ul>
+     <div class="Socials"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-instagram"></i></div>
     </section>
      </footer>
 </template>
 <style scoped>
+.Socials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.Socials i{
+    font-size: 35px;
+    color: white;
+}
+i{
+    margin-right: 4px;
+}
 footer{
     display: flex;
     gap: 6rem;

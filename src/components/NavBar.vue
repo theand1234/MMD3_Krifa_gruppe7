@@ -1,7 +1,10 @@
+<script setup>
+
+</script>
 <template>
     <nav class="navbar">
         <router-link to='/' class="HomeKnap">Hjem</router-link>
-        <div class="dropdown"><button class="dropbtn">Medlemsskab <i></i></button>
+        <div class="dropdown"><button class="dropbtn">Medlemsskab <i class="fas fa-arrow-down"></i></button>
             <div class="dropdown-content"> <router-link to="/TyperAfMedlemsskaber">Typer af medlemsskaber</router-link>
         <router-link to="/MedlemsFordele">Medlemsfordele</router-link>
         <router-link to="/MedlemSomStuderende">Medlem Som Studerende</router-link>
@@ -9,7 +12,7 @@
 
             </div>
         </div>
-        <div class="dropdown"><button class="dropbtn">Din situation <i></i></button>
+        <div class="dropdown"><button class="dropbtn">Din situation <i class="fas fa-arrow-down"></i></button>
             <div class="dropdown-content"> <router-link to="/Loenmodtager">Lønmodtager</router-link>
         <router-link to="/Studerende">Studerende</router-link>
         <router-link to="/Nyudannet">Nyudannet</router-link>
@@ -18,7 +21,7 @@
         <router-link to="/Selvstaendig">Selvstændig</router-link>
             </div>
         </div>
-        <div class="dropdown"><button class="dropbtn">Få hjælp til<i></i></button>
+        <div class="dropdown"><button class="dropbtn">Få hjælp til <i class="fas fa-arrow-down"></i></button>
             <div class="DropdownIndhold"> <div><router-link to="/Dagpenge">Dagpenge</router-link>
         <router-link to="/Jobsoegning">Jobsøgning</router-link>
         <router-link to="/Opsigelse">Opsigelse</router-link>
