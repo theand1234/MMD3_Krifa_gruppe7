@@ -1,4 +1,5 @@
 <script setup>
+import reviewInfo from "../assets/data/trustpilot.json"
 
 </script>
 
@@ -7,5 +8,5 @@
 </template>
 
 <style scoped>
-
+  
 </style>
