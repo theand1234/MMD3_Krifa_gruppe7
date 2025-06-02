@@ -150,7 +150,7 @@ import { ref } from 'vue'
           <span :class="{ bar: true, open: isOpen }"></span>
           <span :class="{ bar: true, open: isOpen }"></span>
         </button>
-        <div class="HeaderRight-mobile"><div><i class="fa-solid fa-magnifying-glass"></i><p>Søg</p></div>
+        <div class="HeaderRight-mobile">
 <div><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></div><button>BLIV MEDLEM</button></div>
       </div>
     </nav>
@@ -431,7 +431,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 25vw;
+    width: 100%;
 }
 .HeaderLeft{
     display: flex;
