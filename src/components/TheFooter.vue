@@ -93,7 +93,7 @@ div{
         background-color: white;
         padding: 0;
         padding-top: 2rem;
-
+        gap: 1rem;
         
     }
     footer p,a,h5{
@@ -106,7 +106,13 @@ width: 100%;
 }
 footer>section {
     width: 100%;
-    margin: 2rem 6rem;
+    margin: 2rem 1rem;
+}
+h5{
+    margin-left: 5px;
+}
+section>div{
+    margin-left: 5px;
 }
 .Socials i{
     font-size: 35px;
