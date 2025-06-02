@@ -87,5 +87,30 @@ div{
 .Information p{
     margin-top: 2px;
 }
+@media (max-width: 600px){
+    footer{
+        flex-direction: column;
+        background-color: white;
+        padding: 0;
+        padding-top: 2rem;
 
+        
+    }
+    footer p,a,h5{
+    color: var(--Krifa-Lilla);
+}
+footer h4{
+background-color: var(--Krifa-Lilla);
+color: white;
+width: 100%;
+}
+footer>section {
+    width: 100%;
+    margin: 2rem 6rem;
+}
+.Socials i{
+    font-size: 35px;
+    color: var(--Krifa-Lilla);
+}
+}
 </style>

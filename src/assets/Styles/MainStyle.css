@@ -74,6 +74,7 @@ h3 {
     }
 }
 
+/* navbar */
 .navbar {
     overflow: hidden;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
@@ -97,15 +98,16 @@ h3 {
 .dropdown .dropbtn {
     border: none;
     outline: none;
-    padding: 14px 16px;
+    padding: 10px 16px;
     background-color: var(--Hvid);
     font-weight: 600;
     font-size: 16px;
+    width: max-content;
 }
 
 .HomeKnap {
     font-weight: 600;
-    padding: 14px 16px;
+    padding: 5px 13px;
     font-size: 16px;
 }
 
@@ -178,4 +180,10 @@ h3 {
 
 .DropdownIndhold a:hover {
     background-color: var(--lys-Graa);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
 }
