@@ -8,10 +8,9 @@ import { ref } from 'vue'
   // 1) Definér hele vores menustruktur som et array af objekter.
   //    Hvis der er children, ryger brugeren videre til et "under-niveau".
   // -----------------------------------------------------
-  const menuItems = [
+  let menuItems = [
     { label: 'Hjem', to: '/' },
-    {
-      label: 'Medlemsskab',
+    { label: 'Medlemsskab',
       children: [
         { label: 'Typer af medlemskab', to: '/typer-af-medlemsskab' },
         { label: 'Medlemsfordele', to: '/medlemsfordele' },
@@ -61,14 +60,14 @@ import { ref } from 'vue'
   //    - currentTitle: teksten, der vises som overskrift, når vi er i en underside
   //    - historyStack: en stak, vi putter ’gamle niveauer’ på, så vi kan gå tilbage
   // -----------------------------------------------------
-  const isOpen = ref(false)
-  const historyStack = ref([])
-  const currentItems = ref(menuItems)
-  const currentTitle = ref('')
+  let isOpen = ref(false)
+  let historyStack = ref([])
+  let currentItems = ref(menuItems)
+  let currentTitle = ref('')
   
   // Vue Router bruges, hvis du vil navigere programmatisk (ikke strengt nødvendigt her)
   // men vi demonstrerer importen, hvis du vil f.eks. closeMobileMenu() vha. router.push(...)
-  const router = useRouter()
+  let router = useRouter()
   
   // -----------------------------------------------------
   // Funktion: Åbn/luk mobil-menuen
@@ -102,6 +101,7 @@ import { ref } from 'vue'
   //            og sætte currentTitle til den netop valgte items label.
   // -----------------------------------------------------
   function goToSubmenu(item) {
+
     // Gem det nuværende på historik-stakken
     historyStack.value.push({
       title: currentTitle.value,
@@ -117,7 +117,7 @@ import { ref } from 'vue'
   // Funktion: Gå tilbage til forrige niveau i historyStack
   // -----------------------------------------------------
   function goBack() {
-    const previous = historyStack.value.pop()
+    let previous = historyStack.value.pop()
     if (previous) {
       currentItems.value = previous.items
       currentTitle.value = previous.title
@@ -407,7 +407,7 @@ import { ref } from 'vue'
     .mobile-only {
       display: flex;
     }
-    header{
+    .navbar-mobile header{
         display: none !important; 
     }
   }
