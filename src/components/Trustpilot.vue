@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
+    <div id="Trustpilot">
     <h2>Vi hjælper dig før, under og efter din ansættelse</h2>
     <ul class="cardContainer">
       <li v-for="review in reviews" :key="review.id" class="card">
@@ -27,11 +27,23 @@ onMounted(() => {
         <p class="time"><span>{{ review.name }}</span>, For {{ review.time }} siden</p>
       </li>
     </ul>
+    <p class="statistik">Bedømt til <span>4.6</span> / 5 baseret på <span>7.186 anmeldelser</span>. Viser vores 4- og 5-stjernede anmeldelser</p>
+    <div class="statistikImg">
+        <img src="../assets/Img/trustpilot_logo.png" alt="">
+    </div>
   </div>
 </template>
 
 
 <style scoped>
+#Trustpilot h2{
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(49, 49, 49);
+    padding: 0 2rem;
+    text-align: center;
+}
+
 .cardContainer {
     padding: 1.5rem 3rem;
     background-color: rgb(255, 255, 255);
@@ -78,6 +90,29 @@ onMounted(() => {
 
 .time span{
     font-weight: 600;
+}
+
+.statistik{
+    font-size: .9rem;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.statistik span:first-child{
+    font-weight: 700;
+}
+
+.statistik span:last-child{
+    text-decoration: underline;
+}
+
+.statistikImg{
+    display: flex;
+    justify-content: center
+}
+
+.statistikImg img{
+    width: 6rem;
 }
 
 @media (min-width: 600px){
