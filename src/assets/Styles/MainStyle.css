@@ -50,6 +50,8 @@ h1 {
 
 h2 {
     font-size: var(--heading-Desktop);
+    font-weight: 900;
+    font-style: italic;
 }
 
 h3 {
