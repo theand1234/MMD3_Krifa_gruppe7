@@ -1,5 +1,4 @@
 <script setup>
-import reviewInfo from "../assets/data/trustpilot.json"
 
 </script>
 
@@ -8,6 +7,7 @@ import reviewInfo from "../assets/data/trustpilot.json"
     <p>
         hello
     </p>
+    <!-- <Trustpilot/> -->
 </div>
 </template>
 
