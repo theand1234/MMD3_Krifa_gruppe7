@@ -9,8 +9,8 @@ import Trustpilot from '../components/Trustpilot.vue'
 </template>
 
 <style scoped>
-  .wrapper {
+  /* .wrapper {
   height: 50rem;
-  background-color: rgb(122, 192, 204);
-  }
+  background-color: rgb(131, 131, 131);
+  } */
 </style>

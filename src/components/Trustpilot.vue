@@ -6,12 +6,8 @@ const reviews = ref([])
 function getPosts() {
   fetch('/data/trustpilot.json')
     .then(response => response.json())
-    .then(data => {
-      reviews.value = data
-    })
-    .catch(error => {
-      console.error('ERROR !!', error)
-    })
+    .then(data => {reviews.value = data})
+    .catch(error => {console.error('ERROR !!', error)})
 }
 
 onMounted(() => {
@@ -22,12 +18,13 @@ onMounted(() => {
 
 <template>
     <div>
-    <h2>Trustpilot Anmeldelser</h2>
-    <ul>
-      <li v-for="review in reviews" :key="review.id">
+    <h2>Vi hjælper dig før, under og efter din ansættelse</h2>
+    <ul class="cardContainer">
+      <li v-for="review in reviews" :key="review.id" class="card">
+        <img src="../assets/Img/trustpilot_stjerner.png" alt="">
         <h3>{{ review.title }}</h3>
-        <p>{{ review.description }}</p>
-        <p>{{ review.name }}, For {{ review.time }} siden</p>
+        <p class="description">{{ review.description }}</p>
+        <p class="time"><span>{{ review.name }}</span>, For {{ review.time }} siden</p>
       </li>
     </ul>
   </div>
@@ -35,8 +32,56 @@ onMounted(() => {
 
 
 <style scoped>
-
-@media (max-width: 600px){
- 
+.cardContainer {
+    padding: 1.5rem 3rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow: auto;
+    max-width: 100%;
 }
+
+.card {
+    flex: 0 0 21rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 12rem;
+    background-color: rgb(238, 241, 243);
+    padding: 1rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3.2rem;
+}
+
+.card img{
+    width: 7rem;
+}
+
+.card h3{
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.time{
+    font-size: .9rem;
+    color: rgb(34, 34, 34);
+}
+
+.time span{
+    font-weight: 600;
+}
+
+@media (min-width: 600px){
+    
+}
+
 </style>
