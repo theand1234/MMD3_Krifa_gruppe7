@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 const reviews = ref([])
 
 function getPosts() {
-  fetch('../assets/data/trustpilot.json')
+  fetch('/data/trustpilot.json')
     .then(response => response.json())
     .then(data => {
       reviews.value = data
@@ -21,7 +21,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <h3>{{ correctReview.name }}</h3>
+    <div>
+    <h2>Trustpilot Anmeldelser</h2>
+    <ul>
+      <li v-for="review in reviews" :key="review.id">
+        <h3>{{ review.title }}</h3>
+        <p>{{ review.description }}</p>
+        <p>{{ review.name }}, For {{ review.time }} siden</p>
+      </li>
+    </ul>
+  </div>
 </template>
 
 

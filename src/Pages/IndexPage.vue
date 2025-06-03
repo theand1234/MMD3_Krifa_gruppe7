@@ -1,20 +1,16 @@
 <script setup>
-
+import Trustpilot from '../components/Trustpilot.vue'
 </script>
 
 <template>
-<div>
-    <p>
-        hello
-    </p>
-    <!-- <Trustpilot/> -->
-</div>
+<div class="wrapper">
+    <Trustpilot />
+  </div>
 </template>
 
 <style scoped>
-  div{
-    height: 3rem;
-    width: auto;
-    background-color: red;
+  .wrapper {
+  height: 50rem;
+  background-color: rgb(122, 192, 204);
   }
 </style>
