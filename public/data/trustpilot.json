@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name": "Gitte",
+        "title": "Altid super service og Max info",
+        "description": "Altid super service og Max info",
+        "time": "37 minutter"
+    },
+    {
+        "id": 2,
+        "name": "René Hultén",
+        "title": "Altid god service",
+        "description": "Altid god service",
+        "time": "2 timer"
+    },
+    {
+        "id": 3,
+        "name": "Ronnie Bang Pedersen",
+        "title": "Hurtig, servicemindet og venlig",
+        "description": "Hurtig, servicemindet og venlig vejledning og oplever altid en positiv og venlig indstilling til min forespørgsel",
+        "time": "2 timer"
+    },
+    {
+        "id": 4,
+        "name": ".Lis H.",
+        "title": "Altid god og venlig hjælp!",
+        "description": "Altid god og venlig hjælp!",
+        "time": "2 timer"
+    },
+    {
+        "id": 5,
+        "name": "Annika Lisbeth Køppen",
+        "title": "Venlig",
+        "description": "Det var nemt at få svar på mine spørgsmål",
+        "time": "2 timer"
+    },
+    {
+        "id": 6,
+        "name": "Razvan-Stefan Mara",
+        "title": "Super ❤️ krifa It's the best one",
+        "description": "Super ❤️ krifa It's the best one",
+        "time": "3 timer"
+    },
+    {
+        "id": 7,
+        "name": "Lena",
+        "title": "Imødekommende og kompetent rådgivning",
+        "description": "Imødekommende og kompetent rådgivning",
+        "time": "3 timer"
+    },
+    {
+        "id": 8,
+        "name": "Thomas Bøgeskov",
+        "title": "Jamen krifa er for mig det absolutte…",
+        "description": "Jamen krifa er for mig det absolutte bedste sted at have a kasse og fagforening, jeg er mine 22 år aldrig gået skuffet der fra så kæmpe anbefaling her fra de er altid søde og hjælpsomme",
+        "time": "3 timer"
+    } 
+     
+]
