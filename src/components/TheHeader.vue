@@ -12,7 +12,7 @@ import { ref } from 'vue'
       children: [
         { label: 'Typer af medlemskab', to: '/typer-af-medlemsskab' },
         { label: 'Medlemsfordele', to: '/medlemsfordele' },
-        { label: 'Medlem som studerende', to: '/studerende' },
+        { label: 'Medlem som studerende', to: '/Medlem-som-studerende' },
         { label: 'Anbefal en ven', to: '/anbefal-en-ven' },
       ],
     },
@@ -122,7 +122,7 @@ import { ref } from 'vue'
        <nav class="navbar-mobile">
       <div class="nav-container">
         <header><div class="HeaderLeft"><RouterLink to="/"><img src="../assets/Img/image 31.png" alt=""></RouterLink><NavBar/></div><div class="HeaderRight"><div><i class="fa-solid fa-magnifying-glass"></i><p>Søg</p></div>
-<div><RouterLink class="Mitkrifa" to="/login"><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></RouterLink></div><button>BLIV MEDLEM</button></div>
+<div><RouterLink class="Mitkrifa" to="/login"><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></RouterLink></div><RouterLink to="/Blivmedlem"><button>BLIV MEDLEM</button></RouterLink></div>
 </header>
         <button 
           class="burger mobile-only" 

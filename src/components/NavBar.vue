@@ -12,7 +12,7 @@
         <div class="dropdown"><button class="dropbtn">Medlemsskab <i class="fas fa-arrow-down"></i></button>
             <div class="dropdown-content"> <router-link to="/typer-af-medlemsskaber">Typer af medlemsskaber</router-link>
         <router-link to="/MedlemsFordele">Medlemsfordele</router-link>
-        <router-link to="/MedlemSomStuderende">Medlem Som Studerende</router-link>
+        <router-link to="/Medlem-som-studerende">Medlem Som Studerende</router-link>
         <router-link to="/AnbefalEnVen">Anbefal en Ven</router-link> 
 
             </div>
