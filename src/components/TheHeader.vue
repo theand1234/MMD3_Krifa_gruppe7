@@ -4,10 +4,8 @@ import NavBar from '../components/NavBar.vue'
 import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   
-  // -----------------------------------------------------
-  // 1) Definér hele vores menustruktur som et array af objekter.
-  //    Hvis der er children, ryger brugeren videre til et "under-niveau".
-  // -----------------------------------------------------
+  // definere hele menuen i et array, hvor dropdown punkterne har endnu et array
+  // inden i
   let menuItems = [
     { label: 'Hjem', to: '/' },
     { label: 'Medlemsskab',
@@ -53,25 +51,21 @@ import { ref } from 'vue'
     { label: 'Søg', to: '/soeg' },
   ]
   
-  // -----------------------------------------------------
-  // 2) Reactive state til at styre mobil-menuen
-  //    - isOpen: lukket eller åben
-  //    - currentItems: hvilke items vi viser i øjeblikket (topniveau eller underside)
-  //    - currentTitle: teksten, der vises som overskrift, når vi er i en underside
-  //    - historyStack: en stak, vi putter ’gamle niveauer’ på, så vi kan gå tilbage
-  // -----------------------------------------------------
+  
+  // isOpen om den er åben eller lukket
   let isOpen = ref(false)
+
+  // holder øje med hvilke niveau vi her været på så man kan gå tilbage uden at lukke hele menuen
   let historyStack = ref([])
+
+  // holder øje med hvilke items vi viser lige nu
   let currentItems = ref(menuItems)
+
+  // holder øje med hvilken menu vi er inde på
   let currentTitle = ref('')
   
-  // Vue Router bruges, hvis du vil navigere programmatisk (ikke strengt nødvendigt her)
-  // men vi demonstrerer importen, hvis du vil f.eks. closeMobileMenu() vha. router.push(...)
-  let router = useRouter()
   
-  // -----------------------------------------------------
-  // Funktion: Åbn/luk mobil-menuen
-  // -----------------------------------------------------
+  // en funktion som åbner og lukker menuen
   function toggleMobileMenu() {
     // Hvis menuen lukker, nullstiller vi stak og går til topniveau
     if (isOpen.value) {
@@ -84,9 +78,9 @@ import { ref } from 'vue'
     }
   }
   
-  // -----------------------------------------------------
-  // Funktion: Luk mobil-menuen helt og nulstil stacks
-  // -----------------------------------------------------
+  
+  // Funktion som lukker menuen og nulstiller stack
+  
   function closeMobileMenu() {
     isOpen.value = false
     currentItems.value = menuItems
@@ -94,12 +88,8 @@ import { ref } from 'vue'
     historyStack.value = []
   }
   
-  // -----------------------------------------------------
-  // Funktion: Når man trykker på et punkt, der HAR children,
-  //            vil vi gemme det nuværende niveau på stakken,
-  //            opdatere currentItems til underpunkterne, 
-  //            og sætte currentTitle til den netop valgte items label.
-  // -----------------------------------------------------
+  // funktion som gør at man trykker på et menu punkt der har children gemmer man
+  // det nuværende niveau på stakken og opdatere current Items til de nye underpunkterne og currentTitle til det netop valgte item label
   function goToSubmenu(item) {
 
     // Gem det nuværende på historik-stakken
@@ -113,9 +103,7 @@ import { ref } from 'vue'
     currentTitle.value = item.label
   }
   
-  // -----------------------------------------------------
-  // Funktion: Gå tilbage til forrige niveau i historyStack
-  // -----------------------------------------------------
+  // denne funktion får en til at gå tilbage i historyStack når man trykker på tilbage kanppen
   function goBack() {
     let previous = historyStack.value.pop()
     if (previous) {
@@ -123,7 +111,7 @@ import { ref } from 'vue'
       currentTitle.value = previous.title
     }
   
-    // Hvis stakken nu er tom, var vi tilbage på topniveau:
+    // Hvis stakken nu er tom, går vi tilbage på topniveau:
     if (historyStack.value.length === 0) {
       currentTitle.value = ''
     }
@@ -131,16 +119,11 @@ import { ref } from 'vue'
 </script>
 
 <template>
-       <!-- Selve navbar'en i toppen (vises altid, både desktop og mobil) -->
        <nav class="navbar-mobile">
       <div class="nav-container">
-        <!-- Logo -->
         <header><div class="HeaderLeft"><RouterLink to="/"><img src="../assets/Img/image 31.png" alt=""></RouterLink><NavBar/></div><div class="HeaderRight"><div><i class="fa-solid fa-magnifying-glass"></i><p>Søg</p></div>
 <div><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></div><button>BLIV MEDLEM</button></div>
 </header>
-        
-  
-        <!-- Burger-ikonet (kun mobil) -->
         <button 
           class="burger mobile-only" 
           @click="toggleMobileMenu" 
@@ -157,9 +140,9 @@ import { ref } from 'vue'
   
     <!-- Det fuldskærms-overlay, der åbnes på mobil, når isOpen=true -->
     <div v-if="isOpen" class="mobile-menu-overlay">
-      <!-- Header i mobilmenu: luk-ikon eller tilbage-ikon + evt. titel -->
+      <!-- Header i mobilmenu: luk-ikon eller tilbage-ikon -->
       <header class="mobile-menu-header">
-        <!-- Hvis vi er dybt i en underside (stack ikke tom), vis en 'tilbage'-pil -->
+
         <button 
           v-if="historyStack.length > 0" 
           class="back-btn" 
@@ -183,14 +166,14 @@ import { ref } from 'vue'
         <h2 v-if="currentTitle" class="mobile-menu-title">{{ currentTitle }}</h2>
       </header>
   
-      <!-- Selve menuen: enten topniveau eller underside alt efter historyStack -->
+      
       <ul class="mobile-menu-list">
         <li 
           v-for="(item, index) in currentItems" 
           :key="index"
           class="mobile-menu-item"
         >
-          <!-- Hvis item har children → tryk giver ny ’underside’ -->
+          <!-- Hvis item har children viser den en ny menu -->
           <button
             v-if="item.children" 
             class="mobile-menu-link has-children"
@@ -200,7 +183,7 @@ import { ref } from 'vue'
             <i class="fas fa-chevron-right"></i>
           </button>
   
-          <!-- Hvis item IKKE har children → almindeligt router-link, og luk menuen -->
+          <!-- Hvis item IKKE har children bliver det almindeligt router-link, og lukker menuen -->
           <router-link
             v-else 
             :to="item.to" 
@@ -212,7 +195,6 @@ import { ref } from 'vue'
         </li>
       </ul>
   
-      <!-- ’Bliv medlem’-knap (kun når vi er på topniveau = historyStack tom) -->
       <div v-if="historyStack.length === 0" class="mobile-menu-footer">
         <router-link to="/bliv-medlem" class="cta-btn">
           BLIV MEDLEM
@@ -225,19 +207,8 @@ import { ref } from 'vue'
 
 
 <style scoped>
- /* ===========================================
-     1) Generelle reset/grundlæggende styling
-     =========================================== */
-     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+ 
   
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
   
   button {
     background: none;
@@ -245,9 +216,7 @@ import { ref } from 'vue'
     cursor: pointer;
   }
   
-  /* ===========================================
-     2) NAVBAR i toppen (synlig både desktop & mobil)
-     =========================================== */
+ 
   .navbar.mobile {
     width: 100%;
     background-color: white;
@@ -265,22 +234,19 @@ import { ref } from 'vue'
     padding: 0 1rem;
   }
   
-  /* Logo */
+ 
   .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #7f0055; /* Krifa-lilla */
   }
   
-  /* Søg-ikon (kun desktop) */
   .nav-icon {
     font-size: 1.2rem;
     color: #333;
   }
   
-  /* ===========================================
-     3) BURGER-IKON (kun mobil) 
-     =========================================== */
+  
   .burger {
     display: none;
     flex-direction: column;
@@ -297,7 +263,7 @@ import { ref } from 'vue'
     transition: all 0.3s ease;
   }
   
-  /* Når isOpen = true, animer burger til kryds */
+  /* animation til burger menu */
   .bar.open:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -308,9 +274,7 @@ import { ref } from 'vue'
     transform: translateY(-7px) rotate(-45deg);
   }
   
-  /* ===========================================
-     4) MOBIL-MENU OVERLAY (skjult indtil isOpen)
-     =========================================== */
+
   .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -323,7 +287,7 @@ import { ref } from 'vue'
     flex-direction: column;
   }
   
-  /* Header i mobilmenu (tilbage-knap / luk-knap + evt. titel) */
+  
   .mobile-menu-header {
     height: 60px;
     border-bottom: 1px solid #ddd;
@@ -333,14 +297,14 @@ import { ref } from 'vue'
     position: relative;
   }
   
-  /* Tilbage-knappen (vises kun når historyStack ikke tom) */
+  
   .back-btn,
   .close-btn {
     font-size: 1.2rem;
     color: #333;
   }
   
-  /* Sidetitel (f.eks. “Medlemsskab”) vises midtstillet, hvis vi er i et undersideniveau */
+  
   .mobile-menu-title {
     flex: 1;
     text-align: center;
@@ -349,16 +313,14 @@ import { ref } from 'vue'
     color: #333;
   }
   
-  /* ===========================================
-     5) SELVE MENU-LISTEN (topniveau eller underside)
-     =========================================== */
+  
   .mobile-menu-list {
     flex: 1;
     overflow-y: auto;
   }
   
   .mobile-menu-item {
-    border-bottom: 1px solid #7f0055; /* lilla linje imellem */
+    border-bottom: 1px solid #7f0055;
   }
   
   .mobile-menu-link {
@@ -377,9 +339,7 @@ import { ref } from 'vue'
     color: #333;
   }
   
-  /* ===========================================
-     6) ’Bliv medlem’ knap i bunden (kun topniveau)
-     =========================================== */
+  
   .mobile-menu-footer {
     padding: 1rem;
     border-top: 1px solid #ddd;
@@ -388,18 +348,14 @@ import { ref } from 'vue'
   .cta-btn {
     display: block;
     text-align: center;
-    background-color: #ffda00; /* gul knap */
+    background-color: #ffda00; 
     color: #333;
     padding: 0.75rem;
     border-radius: 4px;
     font-weight: bold;
   }
   
-  /* ===========================================
-     7) MÉDIA QUERIES 
-     - Desktop (≥ 768px): burger IKKE synlig, search-ikon synlig  
-     - Mobil (< 768px): burger synlig, desktop-menu skjult
-     =========================================== */
+  
   @media screen and (max-width: 767px) {
     .desktop-only {
       display: none;
@@ -419,7 +375,7 @@ import { ref } from 'vue'
     .mobile-only {
       display: none;
     }
-    /* Hele mobil-overlayet er skjult på desktop */
+    
     .mobile-menu-overlay {
       display: none !important;
     }
