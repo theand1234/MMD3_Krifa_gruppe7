@@ -138,7 +138,7 @@ div{
     }
 }
 
-
+/* Hero */
 .hero {
   display: flex;
   width: 100%;
