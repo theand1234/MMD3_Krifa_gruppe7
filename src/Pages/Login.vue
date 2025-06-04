@@ -88,10 +88,6 @@ a{
     color: var(--Hvid);
 }
 
-a:hover{
-    color: var(--Lilla-Accent);
-}
-
 p{
     color: var(--Lys-Blaa);
     font-style: italic;
@@ -139,16 +135,17 @@ button{
     margin-right: 1rem;
 }
 
+
 .loginAlt a:first-child button {
     padding: .7rem 3rem;   
-    border: none;
+    border: 2px solid  #005EE0;
     background-color: #005EE0;
 }
 
 .loginAlt a:last-child button {
     color: var(--Krifa-Lilla);
     padding: .7rem 3rem;   
-    border: none;
+    border: 2px solid  var( --Gul);
     background-color: var(--Gul);
 }
 
@@ -156,6 +153,31 @@ button{
     width: 25rem;
     height: 25rem;
     object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Hover */
+/* --------------------------------------------------------------------------------------------------------- */
+
+a:hover{
+    color: var(--Lilla-Accent);
+}
+
+button:hover{
+    background-color: var(--Hvid);
+    color: var(--Krifa-Lilla);
+}
+
+.loginAlt a:first-child button:hover {
+    background-color: #005EE0;
+    border: 2px solid  var( --Hvid);
+    color: var(--Hvid);
+}
+
+.loginAlt a:last-child button:hover {
+    background-color: var( --Krifa-Lilla);
+    border: 2px solid  var( --Gul);
+    color: var(--Gul);
 }
 
 /* --------------------------------------------------------------------------------------------------------- */
