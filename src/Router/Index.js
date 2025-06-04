@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import IndexPage from '../Pages/IndexPage.vue'
 import TyperAfMedlemsskab from '../Pages/typer-af-Medlemsskab.vue';
+import Login from '../Pages/Login.vue';
+import Mitkrifa from '../Pages/Mitkrifa.vue';
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -15,6 +17,17 @@ const router = createRouter({
             name: 'TyperAfMedlemsskaber',
             component: TyperAfMedlemsskab
         },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
+        {
+            path: '/MitKrifa',
+            name: 'Mitkrifa',
+            component: Mitkrifa
+        }
+
 
 
     ]
