@@ -204,9 +204,138 @@
     </div>
     <img src="../assets/Img/Krifaprocent.png" alt="">
 </section>
+<section class="medlemskab-sect">
+    <h2>Vælg dit medlemskab</h2>
+    <div class="medlemskab-tabs">
+        <ul>
+      <li class="tab"><a href="#">Medlemskab</a></li>
+      <li class="tab active"><a href="#">Under uddannelse</a></li>
+      <li class="tab"><a href="#">Nyuddannet</a></li>
+      <li class="tab"><a href="#">Selvstændig</a></li>
+    </ul>
+    </div>
+    <div class="medlemskab-opt">
+        <div class="option-row">
+            <label>
+                <input type="checkbox" checked/>
+                <span class="checkbox-costom"></span>
+                <span class="opt-text">
+                    <span class="opt-title">fagforening</span>
+                    <span class="opt-desc">- alt inklusivt</span>
+                </span>
+            </label>
+            <div class="opt-pris">0 kr./md.</div>
+        </div>
+        <div class="option-row">
+            <label>
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                <span class="opt-text">
+                    <span class="opt-title">A-kasse</span>
+                    <span class="opt-desc">- alt inklusive</span>
+                </span>
+            </label>
+            <div class="opt-price">0 kr./md.</div>
+        </div>
+        <div class="option-row">
+            <label>
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                <span class="opt-text">
+                    <span class="opt-title">Lønsikring</span>
+                    <span class="opt-desc">- fra</span>
+                </span>
+            </label>
+            <div class="opt-price">0 kr./md.</div>
+        </div>
+    </div>
+    <button>BLIV MEDLEM</button>
+</section>
 </template>
 
 <style scoped>
+.medlemskab-sect{
+    background-color: #e6f2ed;
+    padding: 3rem 1rem 1rem;
+    position: relative;
+    
+}
+.medlemskab-sect h2{
+    margin: 1rem auto;
+    text-align: center;
+}
+.medlemskab-sect button{
+    display: block;
+    margin: 1.5rem auto;
+}
+.option-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.option-row label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.option-row input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+}
+.checkbox-costom{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6e6e6e;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 0.75rem;
+}
+
+.opt-text{
+    display: flex;
+    flex-direction: column;
+}
+.opt-title{
+ font-weight: 600;
+}
+.opt-desc{
+    font-size: 14px;
+}
+.medlemskab-tabs ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 2px solid #c5d8d0;
+}
+
+.tab{
+    position: relative;
+}
+.tab a{
+    padding-bottom: 0.5rem;
+    color: #6e6e6e;
+}
+.tab.active a{
+    color: #460144;
+    text-decoration: underline;
+}
+
+.medlemskab-opt{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .Goderabatter{
     background-color: #66055D;
     color: white;
