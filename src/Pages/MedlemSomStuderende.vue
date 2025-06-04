@@ -45,9 +45,239 @@
   </svg>
   </div>
 </section>
+<section class="MedlemsfordeleWrapper">
+    <h2>Få masser af medlemsfordele - helt gratis</h2>
+    <div class="Medlemsfordele">
+        <div>
+            <i class="fa-solid fa-comments"></i>
+            <p class="Bold">Personlig karrieresparring</p>
+            <p>Hvad er vigtigt i et job for dig? Er du i tvivl om fremtiden? Vi tager udgangspunkt i din situation, og rådgiver om dine muligheder.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-book-bookmark"></i>
+            <p class="Bold">Studiejob eller elevplads?</p>
+            <p>Få vores jurister til at kigge din ansættelseskontrakt igennem inden du underskriver. Vi hjælper også med løntjek og arbejdsforhold.</p>
+        </div>
+    <div>
+        <i class="fa-solid fa-brain"></i>
+        <p class="Bold">Gratis psykologhjælp</p>
+        <p>Har du eksamensangst, stress eller trives du ikke? Få tre gratis samtaler med Krifas erfarne psykologer og psykoterapeuter.</p>
+    </div>
+    <div>
+        <i class="fa-solid fa-lightbulb"></i>
+        <p class="Bold">Iværksætter</p>
+        <p>Drømmer du om din egen virksomhed? Få hjælp til at starte din virksomhed med nyttige værktøjer, rådgivning, podcast og webinarer.</p>
+    </div>
+</div>
+<button>Bliv medlem</button>
+</section>
+<section class="GratisUnderUdd">
+    <div class="angled-image">
+  <svg
+    viewBox="0 0 100 100"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <clipPath id="diagonalClip">
+       <!-- m er punktet man starter i, så laver man en L som er en lige linje. Q får den til at lave en bue så den går fra 80,0 til 90,50 men den svejer mod 90,20 -->
+        <path d="M0,0 L80,0  Q90,20 90,50, Q90,80 70,100 L0,100 z" />
+      </clipPath>
+    </defs>
+
+    <!-- Billedet indeni SVG, der bliver klippet af clipPath'en -->
+    <image
+      href="../assets/Img/Gratis-akasse-pige.png"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid slice"
+      clip-path="url(#diagonalClip)"
+    />
+  </svg>
+</div>
+    <div class="listwrap">
+        <div>
+            <h2>Gratis a-kasse under uddannelse</h2>
+            <p>Du kan få gratis medlemskab af a-kassen, mens du er i gang med en erhvervs- eller videregående uddannelse der varer mindst 18 måneder.</p>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Dagpenge</p>
+                        <p>Få ret til dagpenge som nyuddannet. Du kan få op til 15.081 kr. efter din uddannelse slutter, hvis du ikke har et job på hånden.</p>
+                    </div>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Hjælp til din jobsøgning</p>
+                        <p>Få en ekstra livline, når jobjagten går i gang. Vi hjælper dig med jobsøgningen, giver feedback på dit CV og ansøgning og konkrete råd til jobsamtalen.
+                        </p>
+                </div>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Få den bedste medlemsservice</p>
+                        <p>Vi har verdens bedste medlemmer - og de fortjener verdens bedste service. Derfor er vi rigtig glade over at være kåret til Danmarks bedste telefoniske service af Wilke. Vi sidder også klar til at hjælpe dig.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="GratisUnderUdd2">
+
+    <div class="listwrap">
+        <div>
+            <h2>Gratis fagforening under uddannelse</h2>
+            <p>Du kan få gratis fagforening, når du er fyldt 13 år og er under uddannelse.</p>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Tjek af kontrakt eller lønseddel</p>
+                        <p>Er du i tvivl om, du får det rigtige i løn eller skal du underskrive en kontrakt? Få hjælp af vores jurister – og kom godt fra start.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Sparring om karriere og jobmuligheder</p>
+                        <p>Er du glad for din elevplads, studiejob eller er du i tvivl om din karrierevej? Få sparring om dine muligheder.
+                        </p>
+                </div>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Adgang til webinarer</p>
+                        <p>Mangler du at høre lidt om stress eller tankemylder, eller går du med en iværksætter i maven? Deltag i Krifas online webinarer
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    <div>
+                        <p class="Bold">Gratis psykologhjælp</p>
+                        <p>Føler du dig presset på studiet eller elevpladsen? Få op til 3 samtaler om eksamensangst, stress eller trivsel med vores psykologer.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div class="angled-image">
+  <svg
+    viewBox="0 0 100 100"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <clipPath id="diagonalClip1">
+     
+        <path d="M100,100 L20,100 Q10,80 10,50 Q10,20 30,0 L100,0 Z" />
+      </clipPath>
+    </defs>
+    <image
+      href="../assets/Img/Gratis-akasse-dreng.png"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid slice"
+      clip-path="url(#diagonalClip1)"
+    />
+  </svg>
+</div>
+</section>
+<section class="Goderabatter">
+    <div>
+        <h2>Få adgang til gode rabatter</h2>
+        <p>Tjoose app'en giver dig adgang til over 1200 rabataftaler, med op til 50% rabat på alt det sjove - fra restaurantbesøg, mode og wellness til oplevelser.
+        Som medlem af Krifa kan du frit gøre brug af Tjoose når som helst og hvor som helst
+        </p>
+    </div>
+    <img src="../assets/Img/Krifaprocent.png" alt="">
+</section>
 </template>
 
 <style scoped>
+.Goderabatter{
+    background-color: #66055D;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Goderabatter p{
+    width: 50ch;
+}
+.listwrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+.listwrap>div{
+    display: flex;
+    flex-direction: column;
+    width: 50ch;
+}
+.GratisUnderUdd li{
+    display: flex;
+    flex-direction: row;
+}
+.angled-image {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden; 
+}
+.GratisUnderUdd span{
+    color: #460144;
+    font-size: 25px;
+    margin-right: 1rem;
+}
+.GratisUnderUdd{
+    background-color: #A6AEC6;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+}
+.GratisUnderUdd2{
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    justify-content: flex-end;
+}
+.MedlemsfordeleWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.Medlemsfordele i{
+    font-size: 35px;
+}
+.Medlemsfordele{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 3rem;
+    gap: 4rem;
+    text-align: center;
+}
+.Medlemsfordele>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 button{
   font-size: 20px;
     font-weight: 700;

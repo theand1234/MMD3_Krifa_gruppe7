@@ -205,7 +205,6 @@ button{
 .hero {
   display: flex;
   width: 100%;
-  min-height: 60vh;
   overflow: hidden;
   font-family: sans-serif;
   padding: 0;
