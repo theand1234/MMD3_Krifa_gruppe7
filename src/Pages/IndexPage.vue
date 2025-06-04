@@ -28,7 +28,7 @@ const showMore = ref(false)
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Typer-af-medlemskab.jpg"
+      href="../assets/Img/Hero-Index.jpg"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
@@ -42,7 +42,7 @@ const showMore = ref(false)
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Typer-af-medlemskab.jpg"
+      href="../assets/Img/Hero-Index.jpg"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
@@ -56,7 +56,7 @@ const showMore = ref(false)
   <div class="cards"><card :id="1"/><card :id="2"/><card :id="3"/></div>
   
 </section>
-<a class="BedsteAkasse" href=""><h2>Få hjælp af Danmarks bedste a-kasse</h2><img src="../assets/Img/Bedsteakasse.png" alt=""></a>
+<div class="BedsteAkasseWrapper"><a class="BedsteAkasse" href=""><div class="FaahjaelpBtn"><h2>Vi gør en forskel for dig og din arbejdslyst</h2><button class="BedsteAkasseBtn">Få hjælp af Danmarks bedste a-kasse</button></div><img src="../assets/Img/Bedsteakasse.png" alt=""></a></div>
 <h2>Nyt i Krifa</h2>
 <section class="flex" >
   <div class="Nyheder-section">
@@ -75,7 +75,9 @@ const showMore = ref(false)
     >
       {{ showMore ? 'Vis færre nyheder' : 'Se flere nyheder' }}
   </button>
- 
+ <section class="Anbefal-en-ven-section">
+<div class="AnbefalVen"><h2>Anbefal en ven til Krifa og få en gave</h2><p>Hjælp en ven, kollega eller ægtefælle med at få samme gode medlemsfordele som dig. Så giver vi dig en gave som tak.</p><button>Anbefal en ven</button></div><img src="../assets/Img/Anbefalven.png" alt="">
+ </section>
   </section>
 <div class="wrapper">
     <Trustpilot />
@@ -83,12 +85,45 @@ const showMore = ref(false)
 </template>
 
 <style scoped>
+.AnbefalVen{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
+}
+.AnbefalVen button{
+  margin: 0;
+}
+.Anbefal-en-ven-section{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1067' height='291' viewBox='0 0 1067 291' fill='none'%3E%3Cpath d='M1053.76 0.994143C1057.93 0.628336 1062.18 0.299974 1066.5 0.0117211L-1.14441e-05 0.0117188L0 57V101V152C0 167 0 178.839 0 178.839V289.997L44.2367 289.997L815.293 289.999L815.348 290.073H979.172L913.172 202.073C894.935 177.457 891.672 142.073 927.172 108.073L1053.76 0.994143Z' fill='%23E5E9F2'/%3E%3Cpath d='M269 0.00960398L227.856 124.058C208.337 169.797 177.304 210.164 138.104 240.798C110.046 262.727 78.1338 279.396 44.2367 289.997L0 289.997V178.839C53.0714 165.43 97.1702 128.124 118.792 77.4339L146 0.00927734L269 0.00960398Z' fill='white'/%3E%3C/svg%3E");
+  background-size: cover;
+  display: flex;
+  
+}
+.Anbefal-en-ven-section img{
+  max-width: inherit;
+  height: 20vw;
+}
 .wrapper{
   margin: 3rem 0 1rem 0;
 }
 .flex{
   display: flex;
   flex-direction: column;
+}
+.BedsteAkasseWrapper{
+  background-color: #460144;
+}
+.FaahjaelpBtn{
+  display: flex;
+  flex-direction: column;
+}
+.BedsteAkasseBtn{
+  font-size: 1rem;
+  border: 2px solid white;
+  color: white;
+  background-color: #460144;
+  border-radius: 50px;
+  cursor: pointer;
 }
 .load-more-btn{
   padding: 0.75rem 1.5rem;
@@ -116,6 +151,7 @@ button{
     width: 303px;
     height: 46px;
     align-self: center;
+    margin-bottom: 2rem;
 }
 .Flere-Nyheder-section{
   display: grid;
@@ -152,11 +188,18 @@ button{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 2rem;
+  height: fit-content;
 }
 .BedsteAkasse{
+  margin-top: 2rem;
   justify-content: center;
   align-items: center;
   display: flex;
+}
+.BedsteAkasse h2{
+  margin: 1rem;
+  color: white;
 }
   /* Hero */
 .hero {
@@ -235,12 +278,38 @@ button{
 
 
 @media (max-width: 600px) {
-  .BedsteAkasse{
+  .Anbefal-en-ven-section{
     flex-direction: column;
+  }
+  .Anbefal-en-ven-section img{
+    width: 100%;
+    height: auto;
+  }
+  .Nyheder-section{
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 2rem 0rem;
+  }
+  .Flere-Nyheder-section{
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .Nyhed{
+    width: 90%;
+  }
+  .Nyheder-section p{
+    width: 20ch;
+  }
+  .BedsteAkasse{
+    flex-direction: column-reverse;
+    margin-top: 3rem;
   }
   .BedsteAkasse h2{
     align-self: center;
-    margin: 3rem 1rem 1rem 3rem;
+    margin: 1rem 1rem 3rem 1rem;
+    text-decoration: underline;
   }
   .cards{
     flex-direction: column;

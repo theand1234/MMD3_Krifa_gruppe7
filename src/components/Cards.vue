@@ -19,8 +19,8 @@ const card = computed(() => {
 
 <style scoped>
 .card{
-    width: 350px;
-    max-height: 275px;
+    width: 22rem;
+    max-height: 17rem;
     background-color: #460144;
 }
 .card img{
@@ -37,7 +37,7 @@ const card = computed(() => {
 }
 .card p{
     max-width: 305px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     margin-left: 1rem;
 }

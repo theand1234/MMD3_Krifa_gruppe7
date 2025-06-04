@@ -1,6 +1,11 @@
 <script setup>
 
 </script>
+<style scoped>
+.DropdownIndhold{
+    z-index: 100;
+}
+</style>
 <template>
     <nav class="navbar">
         <router-link to='/' class="HomeKnap">Hjem</router-link>

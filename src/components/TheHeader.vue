@@ -134,7 +134,7 @@ import { ref } from 'vue'
           <span :class="{ bar: true, open: isOpen }"></span>
         </button>
         <div class="HeaderRight-mobile">
-<div><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></div><button>BLIV MEDLEM</button></div>
+<div><RouterLink class="Mitkrifa" to="/Login"><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></RouterLink></div><button>BLIV MEDLEM</button></div>
       </div>
     </nav>
   
@@ -403,6 +403,7 @@ header{
 .HeaderRight{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 32px;
     margin-right: 32px;
     width: 30%;
@@ -430,7 +431,6 @@ img{
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-right: 32px;
     
 }
 .HeaderRight-mobile button{
