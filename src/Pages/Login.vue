@@ -18,7 +18,6 @@ import { RouterLink } from 'vue-router';
             <RouterLink to='/MitKrifa'> 
                 <button>Log ind</button>
             </RouterLink>
-    
             <h2>Eller</h2>
             <div class="loginAlt">
                 <RouterLink to='/MitKrifa'> 
@@ -30,7 +29,7 @@ import { RouterLink } from 'vue-router';
             </div>
         </section>
         <section>
-            <div>
+            <article>
                 <h3>MitID Support</h3>
                 <ul>
                     <li><a href="#">Bestil MitID</a></li>
@@ -40,16 +39,18 @@ import { RouterLink } from 'vue-router';
                     <li><a href="#">Support</a></li>
                     <li><a href="#">Driftsmeldinger</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Intet brugernavn?</h3>
-                <p><a href="#">Opret Brugernavn</a></p>
-                <p>Kræver login med MitID</p>
-            </div>
-            <div>
-                <h3>Glemt din adgangskode?</h3>
-                <p><a href="#">Opret ny adgangskode</a></p>
-            </div>
+            </article>
+            <article>
+                <div>
+                    <h3>Intet brugernavn?</h3>
+                    <p><a href="#">Opret Brugernavn</a></p>
+                    <p>Kræver login med MitID</p>
+                </div>
+                <div>
+                    <h3>Glemt din adgangskode?</h3>
+                    <p><a href="#">Opret ny adgangskode</a></p>
+                </div>
+            </article>
         </section>
         <img class="image" src="../assets/Img/login.jpg" alt="">
     </main>
@@ -155,6 +156,43 @@ button{
     width: 25rem;
     height: 25rem;
     object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Media queries */
+/* --------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    main{
+       flex-direction: column; 
+       gap: 2rem;
+       align-items: center;
+    }
+
+    h1, h2{
+        text-align: center;
+    }
+    
+    section{
+        display: flex;
+        align-items: center;
+    }
+    
+    section:nth-of-type(1){
+        flex-direction: column;
+    }
+    
+    section:nth-of-type(2){
+        gap: 2rem;
+    }
+    
+}
+
+@media (max-width: 1300px) {
+    .image{
+        display: none;
+    }
+
 }
 
 </style>
