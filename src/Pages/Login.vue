@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router';
                 <RouterLink to='/MitKrifa'> 
                     <button>MitID <img src="../assets/svg/MitID.svg" alt=""></button>
                 </RouterLink>
-                <RouterLink to='/MitKrifa'> 
+                <RouterLink to='/bliv-medlem'> 
                     <button>Bliv medlem</button>
                 </RouterLink>
             </div>
