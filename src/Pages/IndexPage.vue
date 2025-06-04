@@ -56,7 +56,7 @@ const showMore = ref(false)
   <div class="cards"><card :id="1"/><card :id="2"/><card :id="3"/></div>
   
 </section>
-<a class="flex" href=""><h2>Få hjælp af Danmarks bedste a-kasse</h2><img src="../assets/Img/Bedsteakasse.png" alt=""></a>
+<a class="BedsteAkasse" href=""><h2>Få hjælp af Danmarks bedste a-kasse</h2><img src="../assets/Img/Bedsteakasse.png" alt=""></a>
 <h2>Nyt i Krifa</h2>
 <section class="flex" >
   <div class="Nyheder-section">
@@ -141,6 +141,9 @@ button{
   font-weight: 700;
   font-size: 25;
 }
+.Nyhed p{
+  width: 35ch;
+}
 .Nyhed img{
   max-width: 30%;
   margin-right: 6px;
@@ -150,7 +153,7 @@ button{
   flex-direction: row;
   justify-content: space-around;
 }
-.flex{
+.BedsteAkasse{
   justify-content: center;
   align-items: center;
   display: flex;
@@ -232,6 +235,18 @@ button{
 
 
 @media (max-width: 600px) {
+  .BedsteAkasse{
+    flex-direction: column;
+  }
+  .BedsteAkasse h2{
+    align-self: center;
+    margin: 3rem 1rem 1rem 3rem;
+  }
+  .cards{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
     .desktop-only{
         display: none;
     }
