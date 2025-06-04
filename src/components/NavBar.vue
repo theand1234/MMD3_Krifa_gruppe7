@@ -5,7 +5,7 @@
     <nav class="navbar">
         <router-link to='/' class="HomeKnap">Hjem</router-link>
         <div class="dropdown"><button class="dropbtn">Medlemsskab <i class="fas fa-arrow-down"></i></button>
-            <div class="dropdown-content"> <router-link to="/TyperAfMedlemsskaber">Typer af medlemsskaber</router-link>
+            <div class="dropdown-content"> <router-link to="/typer-af-medlemsskaber">Typer af medlemsskaber</router-link>
         <router-link to="/MedlemsFordele">Medlemsfordele</router-link>
         <router-link to="/MedlemSomStuderende">Medlem Som Studerende</router-link>
         <router-link to="/AnbefalEnVen">Anbefal en Ven</router-link> 
@@ -45,5 +45,6 @@
   export default {
     name: 'NavBar'
   }
+
   </script>
   
