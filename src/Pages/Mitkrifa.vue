@@ -1,13 +1,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import Card from '../components/Cards.vue'
 
 const isMobile = ref(window.innerWidth < 1000)
-const bigAccordionOpen = ref(false)
+const bigAccordionOpen1 = ref(false)
+const bigAccordionOpen2 = ref(false)
 
 const onResize = () => {
 //check if window size is above 1000px. if yes, keep bigAccordion open
   isMobile.value = window.innerWidth < 1000
-  if (!isMobile.value) bigAccordionOpen.value = true
+  if (!isMobile.value) {
+    bigAccordionOpen1.value = true
+    bigAccordionOpen2.value = true
+  }
 }
 
 onUnmounted(() => {
@@ -84,7 +89,7 @@ onMounted(() => {
             <h2>Selvbetjening</h2>
             <p>Udfyld blanketter, book samtaler og kurser, betalt kontingent, meld dig ledig mv.</p>
         </div>
-        <div v-if="isMobile" class="bigAccordionToggle" @click="bigAccordionOpen = !bigAccordionOpen">
+        <div v-if="isMobile" class="bigAccordionToggle" @click="bigAccordionOpen1 = !bigAccordionOpen1">
             <div class="bigAccordionHeader">
                 <div class="accordionHeadMobile">
                     <h2>Selvbetjening</h2>
@@ -94,7 +99,7 @@ onMounted(() => {
             </div>
         </div>
         <!--Add class "open" if bigAccordionOpen is true or not on Mobile  -->
-        <div class="accordion" :class="{ open: bigAccordionOpen || !isMobile }">
+        <div class="accordion" :class="{ open: bigAccordionOpen1 || !isMobile }">
             <div>
                 <div class="accordionItem">
                     <div class="accordionItemHeader">
@@ -157,29 +162,126 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-  </section>
+    </section>
     <section class="accordionContainer">
         <div class="accordionHead">
             <h2>Mine oplysninger</h2>
             <p>Ret dine oplysninger og se dine køb</p>
         </div>
-        <div v-if="isMobile" class="bigAccordionToggle" @click="bigAccordionOpen = !bigAccordionOpen">
+        <div v-if="isMobile" class="bigAccordionToggle" @click="bigAccordionOpen2 = !bigAccordionOpen2">
             <div class="bigAccordionHeader">
                 <div class="accordionHeadMobile">
-                    <h2>Selvbetjening</h2>
-                    <p>Udfyld blanketter, book samtaler og kurser, betalt kontingent, meld dig ledig mv.</p>
+                    <h2>Mine oplysninger</h2>
+                    <p>Ret dine oplysninger og se dine køb</p>
                 </div>
                 <i class="fa-solid fa-angle-down"></i>
             </div>
         </div>
         <!--Add class "open" if bigAccordionOpen is true or not on Mobile  -->
-        <div class="accordion" :class="{ open: bigAccordionOpen || !isMobile }">
-            
+        <div class="accordion" :class="{ open: bigAccordionOpen2 || !isMobile }">
+            <div class="infomationContainer">
+                <div>
+                    <div class="infomation">
+                        <h4>Fornavn Mellemnavn Efternavn <span>Ret oplysninger</span></h4>
+                        <p>Adresse</p>
+                        <p>Postnummer, By</p>
+                        <p>E-mail</p>
+                        <p>Tlf</p>
+                        <p>Medlemsnummer: ########</p>
+                    </div>
+                    <div class="infomation">
+                        <h4>Min lokale Krifa</h4>
+                        <p>Adresse</p>
+                        <p>Postnummer, By</p>
+                        <p><span>E-mail</span></p>
+                        <p><span>Tlf</span></p>
+                    </div>
+                    <div>
+                        <h4>Mine påmindelser</h4>
+                        <input type="checkbox" id="check1" name="check1">
+                        <label for="check1">Send sms når der er nyt i Krifa Boks</label><br>
+                        <input type="checkbox" id="check2" name="check2">
+                        <label for="check2">Send sms når der skal indsendes nyt ydelseskort</label><br>
+                    </div>
+                    <div class="infomation">
+                        <h4>Min lokale Krifa</h4>
+                        <a href="">Se og ret dine samtykker</a>
+                        <a href="">Søg om indsigt i persondata</a>
+                        <a href="">Søg om sletning af persondata</a>
+                        <a href="">Rediger brugernavn og adgangskode</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="infomation">
+                        <h4>Forsikringsstatus</h4>
+                        <p>Fuldtid <span>Læs mere</span></p> 
+                    </div>
+                    <div class="informationChecks">
+                        <h4>Mine køb</h4>
+                        <div>
+                            <img src="../assets/svg/check.svg" alt="">
+                            <ul>
+                                <li>A-kasse - 538 kr./md.</li>
+                                <li>Siden 07.11.2023</li>
+                                <li><a href="">Se fordele</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="../assets/svg/check.svg" alt="">
+                            <ul>
+                                <li>Krifa Fagforening - 150 kr./md.</li>
+                                <li>Siden 06.11.2023</li>
+                                <li><a href="">Se fordele</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="informationChecks">
+                        <h4>Opgradér nu</h4>
+                        <div>
+                            <img src="../assets/svg/plus.svg" alt="">
+                            <ul>
+                                <li>Privatforsikring</li>
+                                <li>Krifa Forsikring kan tilbyde en lang række forskellige forsikringer</li>
+                                <li><a href="">Læs mere om vores forsikring</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="../assets/svg/plus.svg" alt="">
+                            <ul>
+                                <li>Lønsikring</li>
+                                <li>Med Krifa Lønsikring får du økonomisk tryghed - helt op til 21.000 kr. oven i dine dagpenge hver måned.</li>
+                                <li><a href="">Læs mere om Lønsikring</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="../assets/svg/plus.svg" alt="">
+                            <ul>
+                                <li>Rådgivning til din virksomhed</li>
+                                <li>Få hjælp til personalejura, de langsigtede planer og dine Samarbejdskontrakter. Det er blandt fordelene i Krifa Selvstændige.</li>
+                                <li><a href="">Læs mere om Krifa Selvstændige</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+  </section>
+  <section >
+    <div class="cards"><card :id="4"/><card :id="5"/><card :id="6"/></div>
   </section>
 </template>
 
 <style scoped>
+
+.cards{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
 /* --------------------------------------------------------------------------------------------------------- */
 /* dropdown menu */
 /* --------------------------------------------------------------------------------------------------------- */
@@ -210,7 +312,7 @@ onMounted(() => {
     transition: max-height 0.4s ease;
 }
 
-.accordionItem {
+.accordionItem, .infomation {
     width: 35rem;
 }
 
@@ -242,7 +344,7 @@ onMounted(() => {
     transition: max-height 0.4s ease-out;
 }
 
-.accordionItemContent {
+.accordionItemContent{
     padding: 1rem;
     text-decoration: underline;
     font-weight: 600;
@@ -262,6 +364,49 @@ onMounted(() => {
     padding: 1rem 0;
 }
 
+h4{
+    padding: 1.2rem 0 .5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.infomation, .infomationContainer, .informationChecks div{
+    display: flex;
+}
+
+.infomation{
+    flex-direction: column;
+    
+}
+
+.information label, .informationChecks li{
+    padding-bottom: 1rem;
+}
+
+.infomationContainer a, .infomationContainer span{
+    font-size: 1.1rem;
+    color: var(--Krifa-Lilla);
+    padding: 0 1rem 1rem 0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.informationChecks li:first-of-type{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.informationChecks li:nth-of-type(2){
+    font-size: .9rem;
+}
+
+.informationChecks div{
+    align-items: flex-start;
+}
+
+.informationChecks img{
+    padding-right: 1rem;
+}
 
 
 @media (max-width: 1000px) {
@@ -304,7 +449,9 @@ onMounted(() => {
 }
 h1{
     font-weight: 900;
-    font-size: 4rem;
+
+    /* font-size: 4rem; */
+    font-size: var(--Hero-Desktop);
     font-style: italic;
     color: var(--Hvid);
     margin: 2rem 25rem 2rem 8rem;
