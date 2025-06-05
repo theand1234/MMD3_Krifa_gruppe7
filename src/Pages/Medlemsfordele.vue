@@ -439,7 +439,7 @@ table tbody td.feature a:hover {
     font-size: var(--Subheading-Desktop);
     font-style: italic;
     line-height: 1.4;
-    width: 35ch;
+    width: 100%;
 }
 
 .hero-right {
@@ -467,6 +467,7 @@ table tbody td.feature a:hover {
     object-fit: cover;
 }
 @media (max-width: 600px){
+
     .text-container h1{
         font-size: 30px;
     }
@@ -499,7 +500,7 @@ table tbody td.feature a:hover {
     }
 }
 @media (min-width: 700px){
-    .cards.section{
+    .cards-section{
         display: none;
     }
 }
