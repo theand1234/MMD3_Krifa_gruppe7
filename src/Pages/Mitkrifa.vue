@@ -275,6 +275,7 @@ onMounted(() => {
 <style scoped>
 
 .cards{
+    padding-bottom: 3rem;
     display: flex;
     /* flex-direction: column; */
     align-items: center;
@@ -285,10 +286,11 @@ onMounted(() => {
 /* --------------------------------------------------------------------------------------------------------- */
 /* dropdown menu */
 /* --------------------------------------------------------------------------------------------------------- */
+
 .accordionContainer {
     width: 100%;
     max-width: 80rem;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 4rem 3rem;
     box-shadow: 0px 5px 14px 0px #0000003d;
 }
@@ -408,29 +410,6 @@ h4{
     padding-right: 1rem;
 }
 
-
-@media (max-width: 1000px) {
-    .accordionHead{
-        display: none;
-    }
-
-    .bigAccordionToggle {
-        display: block;
-    }
-
-    .accordion {
-        max-height: 0;
-        flex-direction: column;
-    }
-
-    .accordion.open {
-        max-height: 3000px; 
-    }
-
-    .accordionItem {
-        width: 100%;
-  }
-}
 /* --------------------------------------------------------------------------------------------------------- */
 /* Hero */
 /* --------------------------------------------------------------------------------------------------------- */
@@ -500,8 +479,98 @@ i{
 /* Media Queries */
 /* --------------------------------------------------------------------------------------------------------- */
 
+@media (max-width: 1000px) {
 
-@media (max-width: 600px) {
-  
+    .hero div{
+        display: flex;
+        align-items: center;
+    }
+
+    .accordionHead{
+        display: none;
+    }
+    .bigAccordionToggle {
+        display: block;
+    }
+    .accordion {
+        max-height: 0;
+        flex-direction: column;
+    }
+    .accordion.open {
+        max-height: 3000px; 
+    }
+    .accordionItem {
+        width: 100%;
+    }
+    .bigAccordionToggle {
+        margin-bottom: 0;
+    }
+    .accordionContainer{
+        margin: 3rem 2rem;
+        width: auto;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    .infomationContainer{
+        flex-direction: column;
+    }
+    .infomationContainer a, .infomationContainer span{
+        font-size: .9rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+    .FEP{
+        border-radius: 15px;
+        
+    }
+    .FEP div{
+        flex-direction: column;
+    }
+    .FEP div:nth-of-type(2){
+        display: none;
+    }
+    .FEP i{
+        font-size: 4rem;
+        padding: 2rem;
+    }
+
+    .shape-left{
+        display: none;
+    }
+
+    h1{
+        font-size: var(--Hero-Mobile);
+        margin: 2rem;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+    }
+
 }
+@media (max-width: 750px) {
+
+    .FEPs{
+        gap: 1rem;
+    }
+
+    .FEP i{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    .FEP{
+        padding: .8rem;
+    }
+
+    h3{
+        font-size: .8rem;
+    }
+
+}
+
+
 </style>
