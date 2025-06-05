@@ -12,7 +12,7 @@ const showMore = ref(false)
     <svg class="shape-left" xmlns="http://www.w3.org/2000/svg" width="387" height="270" viewBox="0 0 387 270" fill="none">
   <path d="M140.959 242.882L-0.432617 269.369L-0.432618 148.369L119.296 126.265C178.499 115.316 227.977 74.6961 250.503 18.5936L257.567 0.869266L386.067 0.869269L361.264 62.4467C342.796 108.449 312.797 149.383 274.491 180.81C236.031 212.368 189.859 233.83 140.959 242.882Z" fill="#9946C1"/>
   <path d="M140.959 242.882L-0.432617 269.369L-0.432618 148.369L119.296 126.265C178.499 115.316 227.977 74.6961 250.503 18.5936L257.567 0.869266L386.067 0.869269L361.264 62.4467C342.796 108.449 312.797 149.383 274.491 180.81C236.031 212.368 189.859 233.83 140.959 242.882Z" fill="black" fill-opacity="0.2"/>
-</svg>
+  </svg>
     <div class="text-container">
       <h3>Bliv del af</h3>
       <h1>Danmarks Bedste A-Kasse</h1>
@@ -244,16 +244,14 @@ button{
 }
 
 .text-container h1 {
-  font-size: var(--Hero-Desktop);
   margin-bottom: 1rem;
   font-style: italic;
 }
 
 .text-container p {
-  font-size: var(--Subheading-Desktop);
   font-style: italic;
   line-height: 1.4;
-  width: 35ch;
+  width: 100%;
 }
 
 .hero-right {

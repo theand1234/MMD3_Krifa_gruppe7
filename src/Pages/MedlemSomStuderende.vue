@@ -534,7 +534,6 @@ button{
 }
 
 .text-container h1 {
-    font-size: var(--Hero-Desktop);
     margin-bottom: 1rem;
     font-style: italic;
 }

@@ -430,7 +430,6 @@ h1{
     font-weight: 900;
 
     /* font-size: 4rem; */
-    font-size: var(--Hero-Desktop);
     font-style: italic;
     color: var(--Hvid);
     margin: 2rem 25rem 2rem 8rem;
