@@ -31,6 +31,11 @@ const router = createRouter({
             component: Mitkrifa
         },
         {
+            path: '/Bliv-Medlem',
+            name: 'Blivmedlem',
+            component: Blivmedlem
+        },
+        {
             path: '/Medlem-som-studerende',
             name: 'MedlemSomStuderende',
             component: MedlemSomStuderende

@@ -115,7 +115,7 @@ onMounted(() => {
     width: 6rem;
 }
 
-@media (min-width: 600px){
+@media (min-width: 1000px){
     #Trustpilot{
     padding: 0 12rem;
 }

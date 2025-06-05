@@ -1,6 +1,7 @@
 <script setup>
 import Trustpilot from '../components/Trustpilot.vue'
 import Card from '../components/Cards.vue'
+import TrustpilotMini from '../components/TrustpilotMini.vue'
 import {ref} from 'vue'
 const showMore = ref(false)
 </script>
@@ -50,6 +51,9 @@ const showMore = ref(false)
     />
   </svg>
   </div>
+</section>
+<section>
+    <TrustpilotMini/>
 </section>
 <h2>Hvordan kan vi hjælpe dig?</h2>
 <section >
@@ -240,12 +244,14 @@ button{
 }
 
 .text-container h1 {
-  font-size: 2.5rem;
+  font-size: var(--Hero-Desktop);
   margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .text-container p {
-  font-size: 1.125rem;
+  font-size: var(--Subheading-Desktop);
+  font-style: italic;
   line-height: 1.4;
   width: 35ch;
 }

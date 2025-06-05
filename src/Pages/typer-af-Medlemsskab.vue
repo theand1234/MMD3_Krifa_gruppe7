@@ -178,12 +178,14 @@ div{
 }
 
 .text-container h1 {
-  font-size: 2.5rem;
+  font-size: var(--Hero-Desktop);
   margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .text-container p {
-  font-size: 1.125rem;
+  font-size: var(--Subheading-Desktop);
+  font-style: italic;
   line-height: 1.4;
   width: 35ch;
 }
