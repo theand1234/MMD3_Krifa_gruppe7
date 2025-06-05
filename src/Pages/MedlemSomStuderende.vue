@@ -251,6 +251,7 @@
     </div>
     <button>BLIV MEDLEM</button>
 </section>
+
 <section class="intro-contact">
     <div class="intro-container">
         <div class="intro-text">
