@@ -5,6 +5,7 @@ import Login from '../Pages/Login.vue';
 import Mitkrifa from '../Pages/Mitkrifa.vue';
 import Blivmedlem from '../Pages/Blivmedlem.vue';
 import MedlemSomStuderende from '../Pages/MedlemSomStuderende.vue'
+import Medlemsfordele from '../Pages/Medlemsfordele.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
             path: '/Medlem-som-studerende',
             name: 'MedlemSomStuderende',
             component: MedlemSomStuderende
+        },
+        {
+            path: '/MedlemsFordele',
+            name: 'Medlemsfordele',
+            component: Medlemsfordele
         }
 
 
