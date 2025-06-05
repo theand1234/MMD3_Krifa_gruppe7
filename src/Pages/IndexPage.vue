@@ -138,6 +138,11 @@ const showMore = ref(false)
   border-radius: 50px;
   cursor: pointer;
 }
+.load-more-btn:hover{
+  background-color: var(--Krifa-Lilla);
+  color: var(--Hvid);
+  transition: 0.1s ease-in;
+}
 h2{
   display: flex;
   justify-content: center;

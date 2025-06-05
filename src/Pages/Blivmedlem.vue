@@ -284,15 +284,14 @@ button {
 }
 
 .text-container h1 {
-    margin-bottom: 1rem;
-    font-style: italic;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .text-container p {
-    font-size: var(--Subheading-Desktop);
-    font-style: italic;
-    line-height: 1.4;
-    width: 35ch;
+  font-style: italic;
+  line-height: 1.4;
+  width: 100%;
 }
 
 .hero-right {

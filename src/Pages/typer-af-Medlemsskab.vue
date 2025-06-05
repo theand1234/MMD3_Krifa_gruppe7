@@ -90,6 +90,7 @@ section{
     display: flex;
     padding: 4rem 5rem;
     gap: 5rem;
+    justify-content: center;
 }
 li{
     list-style: circle;
@@ -183,10 +184,9 @@ div{
 }
 
 .text-container p {
-  font-size: var(--Subheading-Desktop);
   font-style: italic;
   line-height: 1.4;
-  width: 35ch;
+  width: 100%;
 }
 
 .hero-right {
