@@ -35,7 +35,7 @@
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Typer-af-medlemskab.jpg"
+      href="../assets/Img/Hero-Typer-af-medlemskab.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
@@ -49,7 +49,7 @@
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Typer-af-medlemskab.jpg"
+      href="../assets/Img/Hero-Typer-af-medlemskab.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"

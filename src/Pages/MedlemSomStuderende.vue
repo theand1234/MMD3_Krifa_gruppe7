@@ -22,7 +22,7 @@
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Medlem-som-studerende.jpg"
+      href="../assets/Img/Hero-Medlem-som-studerende.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
@@ -36,7 +36,7 @@
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Medlem-som-studerende.jpg"
+      href="../assets/Img/Hero-Medlem-som-studerende.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"

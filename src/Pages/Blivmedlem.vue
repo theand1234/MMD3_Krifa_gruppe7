@@ -44,7 +44,7 @@ onMounted(() => {
         </clipPath>
         </defs>
         <image
-        href="../assets/Img/blivmedlem.jpg"
+        href="../assets/Img/blivmedlem.png"
         width="100%"
         height="100%"
         preserveAspectRatio="xMidYMid slice"
@@ -58,7 +58,7 @@ onMounted(() => {
             </clipPath>
             </defs>
             <image
-            href="../assets/Img/blivmedlem.jpg"
+            href="../assets/Img/blivmedlem.png"
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"

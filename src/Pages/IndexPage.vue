@@ -29,7 +29,7 @@ const showMore = ref(false)
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Index.jpg"
+      href="../assets/Img/Hero-Index.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"
@@ -43,7 +43,7 @@ const showMore = ref(false)
       </clipPath>
     </defs>
     <image
-      href="../assets/Img/Hero-Index.jpg"
+      href="../assets/Img/Hero-Index.png"
       width="100%"
       height="100%"
       preserveAspectRatio="xMidYMid slice"

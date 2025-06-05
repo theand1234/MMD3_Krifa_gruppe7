@@ -22,7 +22,7 @@ import Card from '../components/Cards.vue'
         </clipPath>
         </defs>
         <image
-        href="../assets/Img/Hero-Medlemsfordele.jpg"
+        href="../assets/Img/Hero-Medlemsfordele.png"
         width="100%"
         height="100%"
         preserveAspectRatio="xMidYMid slice"
@@ -36,7 +36,7 @@ import Card from '../components/Cards.vue'
             </clipPath>
             </defs>
             <image
-            href="../assets/Img/Hero-Medlemsfordele.jpg"
+            href="../assets/Img/Hero-Medlemsfordele.png"
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"

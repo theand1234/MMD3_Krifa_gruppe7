@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue'
 const reviews = ref([])
 
 function getPosts() {
-  fetch('/data/trustpilot.json')
+  fetch('data/trustpilot.json')
     .then(response => response.json())
     .then(data => {reviews.value = data})
     .catch(error => {console.error('ERROR !!', error)})

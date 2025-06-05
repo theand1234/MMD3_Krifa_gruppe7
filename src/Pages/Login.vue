@@ -140,6 +140,7 @@ button{
     padding: .7rem 3rem;   
     border: 2px solid  #005EE0;
     background-color: #005EE0;
+    cursor: pointer;
 }
 
 .loginAlt a:last-child button {
