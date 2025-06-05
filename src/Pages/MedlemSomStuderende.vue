@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <section class="hero">
+  <section class="hero">
   <div class="hero-left">
     <svg class="shape-left" xmlns="http://www.w3.org/2000/svg" width="387" height="270" viewBox="0 0 387 270" fill="none">
   <path d="M140.959 242.882L-0.432617 269.369L-0.432618 148.369L119.296 126.265C178.499 115.316 227.977 74.6961 250.503 18.5936L257.567 0.869266L386.067 0.869269L361.264 62.4467C342.796 108.449 312.797 149.383 274.491 180.81C236.031 212.368 189.859 233.83 140.959 242.882Z" fill="#9946C1"/>
@@ -9,7 +9,7 @@
 </svg>
     <div class="text-container">
       <h1>Medlemskab for studerende</h1>
-      <p>Gratis fagforening og a-kasse når du er under uddannelse</p>
+      <p>Gratis fagforening og a-kasse når du er under iddannelse</p>
       <button>Bliv medlem</button>
     </div>
   </div>
@@ -251,9 +251,77 @@
     </div>
     <button>BLIV MEDLEM</button>
 </section>
+<section class="intro-contact">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h3>Få en personlig intro til Krifa</h3>
+            <p>Har du spørgsmål om medlemskab i Krifa? Send dit navn og telefonnummer, så ringer vi dig op hurtigst muligt.</p>
+        </div>
+        <form action="#" class="intro-form">
+            <div class="form-row">
+                <input type="text" name="fornavn" placeholder="Fornavn" required>
+                <input type="text" name="efternavn" placeholder="Efternavn" required>
+                <input type="tel" name="telefon" placeholder="Telefon" required>
+            </div>
+            <div class="privacy-link"><a href="#">Her kan du læse mere om, hvordan vi behandler dine personlige oplysninger.</a>
+            </div>
+            <div class="form-submit">
+                <button type="submit">RING MIG OP</button>
+            </div>
+        </form>
+    </div>
+</section>
 </template>
 
 <style scoped>
+.intro-contact{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.intro-container{
+    background-color: #f8d3d8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+.intro-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.form-row{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.form-row input{
+    flex: 1 1 0;
+    min-height: 50px;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.privacy-link a{
+    display: inline-block;
+    text-decoration: underline;
+    color: #460144;
+}
+.form-submit{
+    text-align: left;
+}
+.form-submit button{
+    background-color: #460144;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}
 .medlemskab-sect{
     background-color: #e6f2ed;
     padding: 3rem 1rem 1rem;
@@ -386,6 +454,15 @@
     gap: 5rem;
     justify-content: flex-end;
 }
+.GratisUnderUdd2 span{
+    color: #460144;
+    font-size: 25px;
+    margin-right: 1rem;
+}
+.GratisUnderUdd2 li{
+    display: flex;
+    flex-direction: row;
+}
 .MedlemsfordeleWrapper{
     display: flex;
     flex-direction: column;
@@ -422,7 +499,6 @@ button{
 .hero {
   display: flex;
   width: 100%;
-  min-height: 60vh;
   overflow: hidden;
   font-family: sans-serif;
   padding: 0;
@@ -430,13 +506,9 @@ button{
   background-color: #460144;
 }
 
-.hero-left,.hero-right{
-    width: 50%;
-    min-width: 0;
-
-}
 .hero-left {
   position: relative;
+  flex: 1;  
   background-color: #460144;
   overflow: hidden;
   display: flex;
@@ -472,7 +544,8 @@ button{
 }
 
 .hero-right {
-  position: relative;                
+  position: relative;
+  flex: 1;                 
   overflow: hidden;
   background-color: #460144; 
 }
@@ -496,6 +569,64 @@ button{
   object-fit: cover;
 }
 @media (max-width: 600px) {
+    .intro-form{
+        align-items: center;
+    }
+    .intro-container{
+        width: 100%;
+        padding: 1rem;
+    }
+    .medlemskab-tabs ul{
+            flex-direction: column;
+    }
+    .Goderabatter{
+        flex-direction: column;
+    }
+    .Goderabatter p,h2{
+        width: 100%;
+    }
+    .GratisUnderUdd{
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+    .GratisUnderUdd2{
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+    .listwrap{
+        width: 100%;
+        align-items: flex-start;
+    }
+    .listwrap>div{
+        width: 100%;
+    }
+    .listwrap ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    .angled-image{
+        display: none;
+    }
+    .Medlemsfordele{
+        flex-direction: column;
+    }
+    .form-row{
+        flex-direction: column;
+    }
+    .form-row input{
+        width: 100%;
+    }
+    .medlemskab-tabs ul{
+        gap: 1rem;
+    }
+    .option-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .desktop-only{
         display: none;
     }
@@ -504,7 +635,7 @@ button{
         width: 100%;
         height: auto;
     }
-  .hero {
+    .hero {
     flex-direction: column-reverse;
   }
   .shape-left{
@@ -512,9 +643,9 @@ button{
   }
   .hero-left,
   .hero-right {
-    width: 50%;
+    flex: none;
+    width: 100%;
     min-height: 40vh;
-    min-width: 0;
   }
   .hero-right{
     padding: 0;
