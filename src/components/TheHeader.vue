@@ -13,40 +13,40 @@ import { ref } from 'vue'
         { label: 'Typer af medlemskab', to: '/typer-af-medlemsskab' },
         { label: 'Medlemsfordele', to: '/medlemsfordele' },
         { label: 'Medlem som studerende', to: '/Medlem-som-studerende' },
-        { label: 'Anbefal en ven', to: '/anbefal-en-ven' },
+        { label: 'Anbefal en ven', to: '/anbefal-en-ven', class:'inactive' },
       ],
     },
     {
       label: 'Din situation',
       children: [
-        { label: 'Lønmodtager', to: '/din-situation/loenmodtager' },
-        { label: 'Studerende', to: '/din-situation/studerende' },
-        { label: 'Nyuddannet', to: '/din-situation/nyuddannet' },
-        { label: 'Senior', to: '/din-situation/senior' },
-        { label: 'Ledig', to: '/din-situation/ledig' },
-        { label: 'Selvstændig', to: '/din-situation/selvstaendig' },
+        { label: 'Lønmodtager', to: '/din-situation/loenmodtager', class:'inactive' },
+        { label: 'Studerende', to: '/din-situation/studerende', class:'inactive' },
+        { label: 'Nyuddannet', to: '/din-situation/nyuddannet', class:'inactive' },
+        { label: 'Senior', to: '/din-situation/senior', class:'inactive' },
+        { label: 'Ledig', to: '/din-situation/ledig', class:'inactive' },
+        { label: 'Selvstændig', to: '/din-situation/selvstaendig', class:'inactive' },
       ],
     },
     {
       label: 'Få hjælp til',
       children: [
-        { label: 'Dagpenge', to: '/fa-hjaelp-til/dagpenge' },
-        { label: 'Jobsøgning', to: '/fa-hjaelp-til/jobsogning' },
-        { label: 'Opsigelse', to: '/fa-hjaelp-til/opsigelse' },
-        { label: 'Løn', to: '/fa-hjaelp-til/loen' },
-        { label: 'Ferie', to: '/fa-hjaelp-til/ferie' },
-        { label: 'MUS-samtalen', to: '/fa-hjaelp-til/mus-samtalen' },
-        { label: 'Ansættelse', to: '/fa-hjaelp-til/ansaettelse' },
-        { label: 'Stress', to: '/fa-hjaelp-til/stress' },
-        { label: 'Barsel', to: '/fa-hjaelp-til/barsel' },
-        { label: 'Udvikling', to: '/fa-hjaelp-til/udvikling' },
-        { label: 'Trivsel på jobbet', to: '/fa-hjaelp-til/Trivsel-på-jobbet' },
-        { label: 'Personlighedstest', to: '/fa-hjaelp-til/personlighedstest' },
-        { label: 'Arbejdsvilkår', to: '/fa-hjaelp-til/arbejdsvilkaar' },
-        { label: 'Senior og efterløn', to: '/fa-hjaelp-til/senior-og-efterloen' },
+        { label: 'Dagpenge', to: '/fa-hjaelp-til/dagpenge', class:'inactive' },
+        { label: 'Jobsøgning', to: '/fa-hjaelp-til/jobsogning', class:'inactive' },
+        { label: 'Opsigelse', to: '/fa-hjaelp-til/opsigelse', class:'inactive' },
+        { label: 'Løn', to: '/fa-hjaelp-til/loen', class:'inactive' },
+        { label: 'Ferie', to: '/fa-hjaelp-til/ferie', class:'inactive' },
+        { label: 'MUS-samtalen', to: '/fa-hjaelp-til/mus-samtalen', class:'inactive' },
+        { label: 'Ansættelse', to: '/fa-hjaelp-til/ansaettelse', class:'inactive' },
+        { label: 'Stress', to: '/fa-hjaelp-til/stress', class:'inactive' },
+        { label: 'Barsel', to: '/fa-hjaelp-til/barsel', class:'inactive' },
+        { label: 'Udvikling', to: '/fa-hjaelp-til/udvikling', class:'inactive' },
+        { label: 'Trivsel på jobbet', to: '/fa-hjaelp-til/Trivsel-på-jobbet', class:'inactive' },
+        { label: 'Personlighedstest', to: '/fa-hjaelp-til/personlighedstest', class:'inactive' },
+        { label: 'Arbejdsvilkår', to: '/fa-hjaelp-til/arbejdsvilkaar', class:'inactive' },
+        { label: 'Senior og efterløn', to: '/fa-hjaelp-til/senior-og-efterloen', class:'inactive' },
       ],
     },
-    { label: 'Kontakt', to: '/kontakt' },
+    { label: 'Kontakt', to: '/kontakt', class:'inactive' },
     { label: 'Mit Krifa', to: '/MitKrifa' },
     { label: 'Søg', to: '/soeg' },
   ]
@@ -215,7 +215,7 @@ import { ref } from 'vue'
           <router-link
             v-else 
             :to="item.to" 
-            class="mobile-menu-link"
+            :class="['mobile-menu-link', item.class]"
             @click.native="closeMobileMenu"
           >
             {{ item.label }}
@@ -236,6 +236,9 @@ import { ref } from 'vue'
 
 
 <style scoped>
+.inactive{
+  color: var(--graa) !important;
+}
 .slide-enter-from {
   transform: translateX(-100%);
 }
