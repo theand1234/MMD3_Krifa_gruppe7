@@ -1,5 +1,5 @@
 <script setup>
-
+import Card from '../components/Cards.vue'
 </script>
 
 <template>
@@ -10,8 +10,8 @@
   <path d="M140.959 242.882L-0.432617 269.369L-0.432618 148.369L119.296 126.265C178.499 115.316 227.977 74.6961 250.503 18.5936L257.567 0.869266L386.067 0.869269L361.264 62.4467C342.796 108.449 312.797 149.383 274.491 180.81C236.031 212.368 189.859 233.83 140.959 242.882Z" fill="black" fill-opacity="0.2"/>
 </svg>
     <div class="text-container">
-      <h1>Bliv medlem af Krifa</h1>
-      <p>Få økonomisk tryghed med dagpenge og hjælp til dine jobrettigheder, når du har brug for det.</p>
+      <h1>Medlemsfordele</h1>
+      <p>Som medlem af Krifa har du adgang til en lang række fordele. Her får du et overblik over, hvilke fordele der hører til de forskellige medlemskaber.</p>
     </div>
   </div>
   <div class="hero-right">
@@ -22,7 +22,7 @@
         </clipPath>
         </defs>
         <image
-        href="../assets/Img/blivmedlem.jpg"
+        href="../assets/Img/Hero-Medlemsfordele.jpg"
         width="100%"
         height="100%"
         preserveAspectRatio="xMidYMid slice"
@@ -36,7 +36,7 @@
             </clipPath>
             </defs>
             <image
-            href="../assets/Img/blivmedlem.jpg"
+            href="../assets/Img/Hero-Medlemsfordele.jpg"
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"
@@ -45,7 +45,8 @@
     </svg>
   </div>
 </section>
-<section class="desktop-only">
+<section class="desktop-only1">
+    <h2>Få overblik over dine medlemsfordele</h2>
   <div class="container">
     <div class="pricing-header">
       <div class="price-column empty-cell"></div>
@@ -274,9 +275,21 @@
 </div>
 </section>
 
+<div class="artikle"><card :id="1"/><card :id="2"/><card :id="3"/></div>
 </template>
 
 <style scoped>
+.artikle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  height: fit-content;
+  margin-bottom: 2rem;
+}
+h2{
+    text-align: center;
+}
 .plan-arrow{
     text-align: center;
     font-size: 1.25rem;
@@ -327,7 +340,7 @@
     color: var(--Lilla-Accent);
 }
 
-.desktop-only{
+.desktop-only1{
     padding: 2rem 1rem;
 }
 .container{
@@ -359,7 +372,7 @@ table thead th{
     padding: 1rem 0.5rem;
 }
 table tbody tr:nth-child(odd){
-    background-color: var(--Hvid);
+    background-color: var(--lys-Graa);
 }
 table tbody tr{
     padding: 1rem 0.5rem;
@@ -467,11 +480,16 @@ table tbody td.feature a:hover {
     object-fit: cover;
 }
 @media (max-width: 600px){
-
+    .artikle{
+        margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
     .text-container h1{
         font-size: 30px;
     }
-    .desktop-only{
+    .desktop-only, .desktop-only1{
         display: none;
     }
     .mobile-only{

@@ -119,24 +119,51 @@ import { ref } from 'vue'
 </script>
 
 <template>
-       <nav class="navbar-mobile">
-      <div class="nav-container">
-        <header><div class="HeaderLeft"><RouterLink to="/"><img src="../assets/Img/image 31.png" alt=""></RouterLink><NavBar/></div><div class="HeaderRight"><div><i class="fa-solid fa-magnifying-glass"></i><p>Søg</p></div>
-<div><RouterLink class="Mitkrifa" to="/login"><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></RouterLink></div><RouterLink to="/Bliv-Medlem"><button>BLIV MEDLEM</button></RouterLink></div>
-</header>
-        <button 
+<nav class="navbar-mobile">
+  <div class="nav-container">
+    <header>
+      <div class="HeaderLeft">
+        <RouterLink to="/">
+          <img src="../assets/Img/image 31.png" alt="">
+        </RouterLink>
+        <NavBar/>
+      </div>
+      <div class="HeaderRight">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Søg</p>
+        </div>
+        <div>
+          <RouterLink class="Mitkrifa" to="/login">
+            <i class="fa-solid fa-lock"></i>
+            <p>Mit Krifa</p>
+          </RouterLink>
+        </div>
+        <RouterLink to="/Bliv-Medlem">
+          <button>BLIV MEDLEM</button>
+        </RouterLink>
+      </div>
+    </header>
+    <button 
           class="burger mobile-only" 
           @click="toggleMobileMenu" 
           aria-label="Åbn mobilmenu"
         >
-          <span :class="{ bar: true, open: isOpen }"></span>
-          <span :class="{ bar: true, open: isOpen }"></span>
-          <span :class="{ bar: true, open: isOpen }"></span>
-        </button>
-        <div class="HeaderRight-mobile">
-<div><RouterLink class="Mitkrifa" to="/Login"><i class="fa-solid fa-lock"></i><p>Mit Krifa</p></RouterLink></div><button>BLIV MEDLEM</button></div>
+      <span :class="{ bar: true, open: isOpen }"></span>
+      <span :class="{ bar: true, open: isOpen }"></span>
+      <span :class="{ bar: true, open: isOpen }"></span>
+    </button>
+    <div class="HeaderRight-mobile">
+      <div>
+        <RouterLink class="Mitkrifa" to="/Login">
+          <i class="fa-solid fa-lock"></i>
+          <p>Mit Krifa</p>
+        </RouterLink>
       </div>
-    </nav>
+      <button>BLIV MEDLEM</button>
+    </div>
+  </div>
+</nav>
   
     <!-- Det fuldskærms-overlay, der åbnes på mobil, når isOpen=true -->
     <div v-if="isOpen" class="mobile-menu-overlay">
