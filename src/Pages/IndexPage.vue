@@ -158,7 +158,7 @@ button{
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   gap: 2rem;
-  margin: 2rem 5rem;
+  margin: 0rem 5rem 2rem;
 
 }
 .Nyheder-section{
