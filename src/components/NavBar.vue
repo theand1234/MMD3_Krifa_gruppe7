@@ -37,7 +37,7 @@
         <router-link to="/Stress">Stress</router-link>
         <router-link to="/Barsel">Barsel</router-link>
         <router-link to="/Udvikling">Udvikling</router-link></div>
-        <div><router-link to="/PsykiskArbejdsmiljoe">Psykisk arbejdsmiljø</router-link>
+        <div><router-link to="/Trivsel-på-jobbet">Trivsel på jobbet</router-link>
         <router-link to="/Personlighedstest">Personlighedstest</router-link>
         <router-link to="/Arbejdsvilkaar">Arbejdsvilkår</router-link>
         <router-link to="/SeniorOgEfterloen">Senior og efterløn</router-link></div>

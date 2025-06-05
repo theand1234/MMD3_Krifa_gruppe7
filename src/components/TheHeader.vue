@@ -40,7 +40,7 @@ import { ref } from 'vue'
         { label: 'Stress', to: '/fa-hjaelp-til/stress' },
         { label: 'Barsel', to: '/fa-hjaelp-til/barsel' },
         { label: 'Udvikling', to: '/fa-hjaelp-til/udvikling' },
-        { label: 'Psykisk arbejdsmiljø', to: '/fa-hjaelp-til/psykisk-arbejdsmiljoe' },
+        { label: 'Trivsel på jobbet', to: '/fa-hjaelp-til/Trivsel-på-jobbet' },
         { label: 'Personlighedstest', to: '/fa-hjaelp-til/personlighedstest' },
         { label: 'Arbejdsvilkår', to: '/fa-hjaelp-til/arbejdsvilkaar' },
         { label: 'Senior og efterløn', to: '/fa-hjaelp-til/senior-og-efterloen' },
@@ -166,6 +166,7 @@ import { ref } from 'vue'
 </nav>
   
     <!-- Det fuldskærms-overlay, der åbnes på mobil, når isOpen=true -->
+  <transition name="slide">
     <div v-if="isOpen" class="mobile-menu-overlay">
       <!-- Header i mobilmenu: luk-ikon eller tilbage-ikon -->
       <header class="mobile-menu-header">
@@ -228,12 +229,29 @@ import { ref } from 'vue'
         </router-link>
       </div>
     </div>
+  </transition>
 
 </template>
 
 
 
 <style scoped>
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+.slide-enter-to {
+  transform: translateX(0%);
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-leave-from {
+  transform: translateX(0%);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
  .Mitkrifa{
   display: flex;
   gap: 6px;
@@ -318,6 +336,7 @@ import { ref } from 'vue'
     z-index: 2000;
     display: flex;
     flex-direction: column;
+
   }
   
   
