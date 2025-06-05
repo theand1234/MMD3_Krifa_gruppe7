@@ -247,7 +247,7 @@
 }
 .plan-header{
     position: relative;
-    background-color: #fff;
+    background-color: var(--Hvid);
     padding: 1rem 1rem 0.75rem;
     display: flex;
     align-items: center;
@@ -258,7 +258,7 @@
 
 .cards{
     width: 280px;
-    background-color: #fff;
+    background-color: var(--Hvid);
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
     display: flex;
@@ -279,10 +279,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f0efff;
+    border-bottom: 1px solid var(--Hvid);
 }
 .plan-features li a{
-    color: #7c62b5;
+    color: var(--Lilla-Accent);
 }
 
 .desktop-only{
@@ -317,7 +317,7 @@ table thead th{
     padding: 1rem 0.5rem;
 }
 table tbody tr:nth-child(odd){
-    background-color: #f3f0fb;
+    background-color: var(--Hvid);
 }
 table tbody tr{
     padding: 1rem 0.5rem;
@@ -346,7 +346,7 @@ table tbody td.feature a:hover {
     font-size: 1.25rem;
 }
 .cell.yes span{
-    color: #460144;
+    color: var(--Krifa-Lilla);
 }
 .cell.no span{
     color: #999999;
