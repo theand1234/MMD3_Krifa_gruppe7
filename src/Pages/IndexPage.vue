@@ -17,7 +17,9 @@ const showMore = ref(false)
       <h3>Bliv del af</h3>
       <h1>Danmarks Bedste A-Kasse</h1>
       <p>Krifa fremmer god arbejdslyst ved at sætte dig og din trivsal i fokus. Vi kender dine rettigheder, når du ikke selv gør.</p>
-      <button>Bliv medlem</button>
+      <router-link to="/Bliv-Medlem" class="cta-btn">
+        <button>Bliv medlem</button>
+        </router-link>
     </div>
   </div>
   <div class="hero-right">
@@ -89,6 +91,9 @@ const showMore = ref(false)
 </template>
 
 <style scoped>
+.cta-btn button:hover{
+  cursor: pointer;
+}
 .AnbefalVen{
   display: flex;
   flex-direction: column;

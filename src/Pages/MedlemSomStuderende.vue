@@ -10,7 +10,9 @@
     <div class="text-container">
       <h1>Medlemskab for studerende</h1>
       <p>Gratis fagforening og a-kasse når du er under iddannelse</p>
-      <button>Bliv medlem</button>
+      <router-link to="/Bliv-Medlem" class="cta-btn">
+        <button>Bliv medlem</button>
+        </router-link>
     </div>
   </div>
   <div class="hero-right">
@@ -275,6 +277,9 @@
 </template>
 
 <style scoped>
+.cta-btn button:hover{
+  cursor: pointer;
+}
 .intro-contact{
     position: relative;
     display: flex;
